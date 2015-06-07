@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>JSSU_Shen</title>
+  <title>FB Design Preparation | JSSU_Shen</title>
   <meta name="author" content="Junsu Shen">
   
-  <meta name="description" content="Junsu Shen Blog">
+  <meta name="description" content="Original from Mitbbs. The orignal post no longer available.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="FB Design Preparation"/>
   <meta property="og:site_name" content="JSSU_Shen"/>
 
   
@@ -99,42 +99,33 @@
 
   <div class="container">
   	<div class="content">
-    	 <div class="page-header">
-  <h1>宁静致远</h1>
-</div>
+    	 
 
-<div class="row page">
 
+	
+		<div class="page-header">		
+			<h1> FB Design Preparation</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
 	
 	<div class="col-md-9">
 	
 
-		<div class="slogan">
-      <i class="fa fa-heart"></i>
-      &quot;在吃货眼中，我永远是一块肉&quot;----Francis Bacon
-</div>    
-
-		<div class="mypage">
-		
-		<!-- title and entry -->
-		
+	
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <p>Original from Mitbbs. The orignal post no longer available.</p>
 			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2015-06-07 </div>
-			<div class="article-title"><a href="/2015/06/07/Design/" title="Original from Mitbbs. The orignal post no longer available.">FB Design Preparation</a></div>						
-		</h3>
-	
+		</div> <!-- alert -->
+			
 
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <ol>
+	<!-- content -->
+	<div class="mypage">		
+	    <ol>
 <li>入门级的news feed</li>
 </ol>
 <p><a href="http://www.infoq.com/presentations/Scale-at-Facebook" target="_blank" rel="external">http://www.infoq.com/presentations/Scale-at-Facebook</a><br><a href="http://www.infoq.com/presentations/Facebook-Software-Stack" target="_blank" rel="external">http://www.infoq.com/presentations/Facebook-Software-Stack</a><br>一般的followup question是估算需要多少server<br>另外这个帖子有讨论<br><a href="http://www.mitbbs.ca/article_t/JobHunting/32463885.html" target="_blank" rel="external">http://www.mitbbs.ca/article_t/JobHunting/32463885.html</a><br>这篇文章稍微提到要怎么approach这种题，可以稍微看看<br><a href="http://book.douban.com/reading/23757677/" target="_blank" rel="external">http://book.douban.com/reading/23757677/</a></p>
@@ -182,265 +173,79 @@
 <p>以上是question specific的东西，<br>这个讲完了，我们可以讲一些每道题都是用的，比如说<br>怎么scale/怎么partition/怎么实现consistency，这些东西，可以套用到任何题上</p>
 <p>当然了，我们遇到的题和解题的方法可能都有些出入，不见得每道题有一个路数下来，<br>最重要的是，讲题的时候要有条理，画图要清楚，保持和面试官的交流，随时问一下人<br>家的意见。</p>
 <p>我能想到的就这么多，欢迎大家交流，希望大家都能找到理想的工作.</p>
-
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2015/06/07/Design/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2015-06-07 </div>
-			<div class="article-title"><a href="/2015/06/07/Timestamp/" >Timestamp</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-8">
-	
-	
-	  <p> Example:<br>     timestamp: 1 ‘key’ ‘value1’<br>     timestamp: 2 ‘key’ ‘value2’<br>     timestamp: 3 ‘key’ ‘value3’<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">1</span>)</span> -&gt;</span> value1</span><br><span class="line"><span class="string">'key'</span> @ timestamp <span class="number">1</span><span class="function"> -&gt;</span> value1</span><br><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">2</span>)</span> -&gt;</span> value1</span><br><span class="line"><span class="string">'key'</span> @ timestamp <span class="number">2</span><span class="function"> -&gt;</span> value2</span><br><span class="line"><span class="string">'key'</span> @ timestamp <span class="number">1.5</span><span class="function"> -&gt;</span> value1</span><br><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">3</span>)</span> --&gt;</span> ??? value3</span><br><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">0</span>)</span> --&gt;</span> ??? <span class="number">0</span> <span class="keyword">or</span> <span class="literal">undefined</span></span><br><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">10</span>)</span> --&gt;</span> ??? value3</span><br></pre></td></tr></table></figure></p>
-<p>要求设计<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">void <span class="operator"><span class="keyword">set</span>(<span class="built_in">int</span> <span class="keyword">timestamp</span>, <span class="keyword">string</span> <span class="keyword">key</span>, <span class="built_in">int</span> val)</span><br><span class="line"><span class="built_in">int</span> <span class="keyword">get</span>(<span class="built_in">int</span> t, <span class="keyword">string</span> <span class="keyword">key</span>)</span></span><br></pre></td></tr></table></figure></p>
-	
-	</div>
-	
-	<div class="col-md-4">
-	  <div class="thumbnail"><a href="/2015/06/07/Timestamp/"><img src="/images/tag-plugins/plugins.jpg" alt="Timestamp"  class="nofancybox"></a></div>
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2015/06/07/Timestamp/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2015-06-06 </div>
-			<div class="article-title"><a href="/2015/06/06/今天/" >论底层青年如何逆袭到中上阶层</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
 	  
-	
-	  <p>转：微信号-&gt;灼见</p>
-<p>李白曾说自己是李暠九世孙，郭沫若对此考证一番之后，认为李白在吹牛。先不说此事真伪，单说李暠，他是李广十六世孙，东晋年间在敦煌酒泉一带称王，他的两个儿子先后继位后一个战死，一个战败自杀。后来，李暠七世孙李渊建立唐朝。很多改变历史的大人物的出现不是因为祖坟冒青烟，他们做成的那些大事可能是一个家族几代人、十几代人乃至几十代人奋斗不息的结果。</p>
-<p>有些事，即使你选对策略，竭尽全力，直到死你也做不成，你儿子也做不成，直到你孙子长大成人了才有可能做成。也有可能还是做不成，需要你孙子的儿子、孙子们继续为之奋斗不息……<br>
-	
 	</div>
-	
-  
-</div>
-	<a type="button" href="/2015/06/06/今天/#more" class="btn btn-default more">Read More</a>
-</div>
 
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2015-06-04 </div>
-			<div class="article-title"><a href="/2015/06/04/TreeCode/" >Code Tree</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <h3 id="Contains_Duplicate_III">Contains Duplicate III</h3><p>Given an array of integers, find out whether there are two distinct indices i and j in the array such that the difference between nums[i] and nums[j] is at most t and the difference between i and j is at most k.<br>
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2015/06/04/TreeCode/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2015-06-03 </div>
-			<div class="article-title"><a href="/2015/06/03/TestPage/" >TestPage</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> h; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2015/06/03/TestPage/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2015-06-03 </div>
-			<div class="article-title"><a href="/2015/06/03/hello-world/" >Hello World</a></div>						
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2015/06/03/hello-world/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-
-		</div>
-
-		<!-- pagination -->
-		<div>
-  		<center>
-		<div class="pagination">
+	<div>
+  	<center>
+	<div class="pagination">
 <ul class="pagination">
 	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/06/07/Timestamp/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
 </ul>
 </div>
 
-  		</center>
-		</div>
-
-		
-		
-	</div> <!-- col-md-9 -->
-
-	
-		<div class="col-md-3">
-	<div id="sidebar">
-	
-			<div class="form-group has-success has-feedback">
-  <form action="//google.com/search" method="get" accept-charset="utf-8" >
-    <input type="search" name="q" results="0" placeholder="Search" class="form-control">
-    <input type="hidden" name="q" value="site:jssu.github.io">	
-  </form>
-</div>
-
-		
-			
-	<div class="widget">
-		<h4>Categories</h4>
-		<ul class="tag_box inline list-unstyled">
-		
-			<li><a href="/categories/学习/">学习<span>2</span></a></li>
-		
-			<li><a href="/categories/生活/">生活<span>1</span></a></li>
-		
-		</ul>
+    </center>
 	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
 
-		
-			
-	<div class="widget">
-		<h4>Tag Cloud</h4>
-		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/LeetCode/">LeetCode<span>1</span></a></li>
-		
-			<li><a href="/tags/文章/">文章<span>1</span></a></li>
-		
-			<li><a href="/tags/FB/">FB<span>1</span></a></li>
-		
-			<li><a href="/tags/Uber/">Uber<span>1</span></a></li>
-		
-		 
-		</ul>
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015-06-07 
 	</div>
+	
 
+	<!-- categories -->
+    
 
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/FB/">FB<span>1</span></a></li>
+    </ul>
+	</div>
 		
-			
-<div class="widget">
-  <h4>Recent Posts</h4>
-  <ul class="entry list-unstyled">
-    
-      <li>
-        <a href="/2015/06/07/Design/"  title="Original from Mitbbs. The orignal post no longer available." ><i class="fa fa-file-o"></i>FB Design Preparation...</a>
-      </li>
-    
-      <li>
-        <a href="/2015/06/07/Timestamp/" ><i class="fa fa-file-o"></i>Timestamp...</a>
-      </li>
-    
-      <li>
-        <a href="/2015/06/06/今天/" ><i class="fa fa-file-o"></i>论底层青年如何逆袭到中上阶层...</a>
-      </li>
-    
-      <li>
-        <a href="/2015/06/04/TreeCode/" ><i class="fa fa-file-o"></i>Code Tree...</a>
-      </li>
-    
-      <li>
-        <a href="/2015/06/03/TestPage/" ><i class="fa fa-file-o"></i>TestPage...</a>
-      </li>
-    
-  </ul>
-</div>
 
-		
-			
-<div class="widget">
-	<h4>Links</h4>
-	<ul class="blogroll list-unstyled">
+	<!-- toc -->
+	<div class="meta-widget">
 	
-		<li><i class="fa fa-github"></i><a href="https://github.com/JSSU" title="My Github account." target="_blank"]);">My Github</a></li>
+	</div>
 	
-		<li><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/pub/junsu-shen/25/973/b36" title="My Linkin account." target="_blank"]);">LinkedIn</a></li>
+    <hr>
 	
-	</ul>
-</div>
-
-
-		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
+</div><!-- col-md-3 -->
 
 	
-	
-</div> <!-- row-fluid -->
+
+</div><!-- row -->
+
 	</div>
   </div>
   <div class="container-narrow">

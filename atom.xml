@@ -5,7 +5,7 @@
   <subtitle><![CDATA[宁静致远]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jssu.github.io//"/>
-  <updated>2015-06-07T05:24:48.000Z</updated>
+  <updated>2015-06-07T18:08:35.000Z</updated>
   <id>http://jssu.github.io//</id>
   
   <author>
@@ -14,6 +14,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[FB Design Preparation]]></title>
+    <link href="http://jssu.github.io/2015/06/07/Design/"/>
+    <id>http://jssu.github.io/2015/06/07/Design/</id>
+    <published>2015-06-07T17:58:50.000Z</published>
+    <updated>2015-06-07T18:08:35.000Z</updated>
+    <content type="html"><![CDATA[<ol>
+<li>入门级的news feed</li>
+</ol>
+<p><a href="http://www.infoq.com/presentations/Scale-at-Facebook" target="_blank" rel="external">http://www.infoq.com/presentations/Scale-at-Facebook</a><br><a href="http://www.infoq.com/presentations/Facebook-Software-Stack" target="_blank" rel="external">http://www.infoq.com/presentations/Facebook-Software-Stack</a><br>一般的followup question是估算需要多少server<br>另外这个帖子有讨论<br><a href="http://www.mitbbs.ca/article_t/JobHunting/32463885.html" target="_blank" rel="external">http://www.mitbbs.ca/article_t/JobHunting/32463885.html</a><br>这篇文章稍微提到要怎么approach这种题，可以稍微看看<br><a href="http://book.douban.com/reading/23757677/" target="_blank" rel="external">http://book.douban.com/reading/23757677/</a></p>
+<ol>
+<li>facebook chat,这个也算是挺常问的<br><a href="http://www.erlang-factory.com/upload/presentations/31/EugeneLet" target="_blank" rel="external">http://www.erlang-factory.com/upload/presentations/31/EugeneLet</a></li>
+</ol>
+<p><a href="https://www.facebook.com/note.php?note_id=14218138919" target="_blank" rel="external">https://www.facebook.com/note.php?note_id=14218138919</a></p>
+<p><a href="http://www.cnblogs.com/piaoger/archive/2012/08/19/2646530.html" target="_blank" rel="external">http://www.cnblogs.com/piaoger/archive/2012/08/19/2646530.html</a><br><a href="http://essay.utwente.nl/59204/1/scriptie_J_Schipers.pdf" target="_blank" rel="external">http://essay.utwente.nl/59204/1/scriptie_J_Schipers.pdf</a></p>
+<ol>
+<li>typeahead search/search suggestion，这个也常见</li>
+</ol>
+<p><a href="https://www.facebook.com/video/video.php?v=432864835468" target="_blank" rel="external">https://www.facebook.com/video/video.php?v=432864835468</a></p>
+<p>问题在这个帖子里被讨论到，基本上每个问题，在视频里都有回答<br><a href="http://www.mitbbs.com/article_t/JobHunting/32438927.html" target="_blank" rel="external">http://www.mitbbs.com/article_t/JobHunting/32438927.html</a></p>
+<ol>
+<li>任给一个手机的位置信号(经纬度)，需要返回附近5mile 的POI<br>这个这里有讨论，这题貌似nyc很爱考…<br><a href="http://www.mitbbs.ca/article0/JobHunting/32476139_0.html" target="_blank" rel="external">http://www.mitbbs.ca/article0/JobHunting/32476139_0.html</a></li>
+</ol>
+<ol>
+<li>Implement second/minute/hour/day counters<br>这题真不觉得是system design，但万一问道，还是要有准备，貌似在总部面试会被问<br>道….<br>这个帖子有讨论<br><a href="http://www.mitbbs.com/article_t/JobHunting/32458451.html" target="_blank" rel="external">http://www.mitbbs.com/article_t/JobHunting/32458451.html</a></li>
+</ol>
+<ol>
+<li>facebook photo storage，这个不太会被问起，但是知道也不错</li>
+</ol>
+<p><a href="https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Beaver.pdf" target="_blank" rel="external">https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Beaver.pdf</a></p>
+<p><a href="https://www.facebook.com/note.php?note_id=76191543919" target="_blank" rel="external">https://www.facebook.com/note.php?note_id=76191543919</a></p>
+<ol>
+<li>facebook timeline,这个也不太是个考题，看看就行了</li>
+</ol>
+<p><a href="https://www.facebook.com/note.php?note_id=10150468255628920" target="_blank" rel="external">https://www.facebook.com/note.php?note_id=10150468255628920</a></p>
+<p><a href="http://highscalability.com/blog/2012/1/23/facebook-timeline-bro" target="_blank" rel="external">http://highscalability.com/blog/2012/1/23/facebook-timeline-bro</a></p>
+<p>除了这些，准备一下这些题目<br>implement memcache<br><a href="http://www.adayinthelifeof.nl/2011/02/06/memcache-internals/" target="_blank" rel="external">http://www.adayinthelifeof.nl/2011/02/06/memcache-internals/</a></p>
+<p>implement tinyurl（以及distribute across multiple servers)<br><a href="http://stackoverflow.com/questions/742013/how-to-code-a-url-sho" target="_blank" rel="external">http://stackoverflow.com/questions/742013/how-to-code-a-url-sho</a></p>
+<p>determine trending topics(twitter)<br><a href="http://www.americanscientist.org/issues/pub/the-britney-spears-" target="_blank" rel="external">http://www.americanscientist.org/issues/pub/the-britney-spears-</a><br><a href="http://www.michael-noll.com/blog/2013/01/18/implementing-real-t" target="_blank" rel="external">http://www.michael-noll.com/blog/2013/01/18/implementing-real-t</a></p>
+<p>copy one file to multiple servers<br><a href="http://vimeo.com/11280885" target="_blank" rel="external">http://vimeo.com/11280885</a></p>
+<p>稍微知道一下dynamo key value store，以及google的gfs和big table</p>
+<p>其他家的<br><a href="http://www.quora.com/What-are-the-top-startup-engineering-blogs" target="_blank" rel="external">http://www.quora.com/What-are-the-top-startup-engineering-blogs</a></p>
+<p>==================================================================<br>在说说怎么准备这样的面试<br>首先如果你连availability/scalability/consistency/partition之类的都不是太有概<br>念的话，我建议先去wikipedia或者找一个某个大学讲这门课的网站稍微看一下，别一<br>点都不知道<br>这个链接也不错<br><a href="http://www.aosabook.org/en/distsys.html" target="_blank" rel="external">http://www.aosabook.org/en/distsys.html</a></p>
+<p>如果你这些基本的东西都还知道，那么我觉得你就和大部分毫无实际经验的人差不多一<br>个水平…<br>能做的就是一点一点去准备，如果你还有充足的时间的话，建议从你面试的那家公司的<br>engineering blog看起，把人家用的technology stack/product都搞清楚，然后在把能<br>找到的面试题都做一遍呗….我们做coding题说白了不也是题海战术…而且你如果坚<br>持看下去，真的会看出心得，你会发现很多地方都有相同之处，看多了就也能照葫芦画<br>瓢了…</p>
+<p>再有就是面试的时候应该怎么去approach这种题，我说说我的做法</p>
+<ol>
+<li>product spec/usage scenario 和面试者confirm这个东西到底是做什么的<br>可以先列出来几个major functionality，然后有时间的话，再补充一些不重要的<br>把你想的都写下来</li>
+</ol>
+<ol>
+<li>define some major components<br>就是画几个圈圈框框的，每个发表一番您的高见….然后讲他们之间怎么interact</li>
+</ol>
+<p>以上是question specific的东西，<br>这个讲完了，我们可以讲一些每道题都是用的，比如说<br>怎么scale/怎么partition/怎么实现consistency，这些东西，可以套用到任何题上</p>
+<p>当然了，我们遇到的题和解题的方法可能都有些出入，不见得每道题有一个路数下来，<br>最重要的是，讲题的时候要有条理，画图要清楚，保持和面试官的交流，随时问一下人<br>家的意见。</p>
+<p>我能想到的就这么多，欢迎大家交流，希望大家都能找到理想的工作.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[Original from Mitbbs. The orignal post no longer available.]]>
+    
+    </summary>
+    
+      <category term="FB" scheme="http://jssu.github.io/tags/FB/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Timestamp]]></title>
@@ -105,7 +169,7 @@
     <link href="http://jssu.github.io/2015/06/04/TreeCode/"/>
     <id>http://jssu.github.io/2015/06/04/TreeCode/</id>
     <published>2015-06-04T22:53:27.000Z</published>
-    <updated>2015-06-07T05:16:21.000Z</updated>
+    <updated>2015-06-07T18:07:03.000Z</updated>
     <content type="html"><![CDATA[<h3 id="Contains_Duplicate_III">Contains Duplicate III</h3><p>Given an array of integers, find out whether there are two distinct indices i and j in the array such that the difference between nums[i] and nums[j] is at most t and the difference between i and j is at most k.<br>        <a id="more"></a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">struct</span> Node&#123;</span><br><span class="line">        <span class="keyword">long</span> val;  <span class="comment">//t</span></span><br><span class="line">        <span class="keyword">int</span> pos;  <span class="comment">//k</span></span><br><span class="line">        Node * left;</span><br><span class="line">        Node * right;</span><br><span class="line">        Node(<span class="keyword">long</span> v, <span class="keyword">int</span> p)&#123;val=v; pos=p; left=NULL; right=NULL;&#125;&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">insert</span><span class="params">(Node * &amp;root, <span class="keyword">int</span> ks, <span class="keyword">long</span> tz, <span class="keyword">int</span> k, <span class="keyword">int</span> t)</span></span><br><span class="line">    </span>&#123; <span class="keyword">if</span>(!root)</span><br><span class="line">        &#123;root=<span class="keyword">new</span> Node(tz, ks); <span class="keyword">return</span> <span class="keyword">false</span>;&#125;</span><br><span class="line">      <span class="keyword">if</span>(<span class="built_in">abs</span>(<span class="keyword">long</span>(tz-root-&gt;val))&gt;INT_MAX)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">      <span class="keyword">if</span>(ks-root-&gt;pos&lt;=k &amp;&amp; <span class="built_in">abs</span>(tz-root-&gt;val)&lt;=t)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">      <span class="keyword">if</span>(tz&lt; root-&gt;val)</span><br><span class="line">        <span class="keyword">return</span> insert(root-&gt;left, ks, tz, k, t);</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> insert(root-&gt;right, ks, tz, k, t);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">containsNearbyAlmostDuplicate</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> k, <span class="keyword">int</span> t)</span> </span>&#123; </span><br><span class="line">       <span class="keyword">if</span>(nums.empty()) <span class="keyword">return</span> <span class="keyword">false</span>;             <span class="comment">// j-i&lt;=k; [j]-[i]&lt;=t </span></span><br><span class="line">       Node *root=<span class="keyword">new</span> Node((<span class="keyword">long</span>)nums[<span class="number">0</span>],<span class="number">0</span>);      <span class="comment">//k is position, t is nums[];</span></span><br><span class="line">       <span class="keyword">int</span> lenn= nums.size();</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;lenn; i++)</span><br><span class="line">       &#123; <span class="keyword">if</span>(insert(root, i, nums[i], k, t)) </span><br><span class="line">             <span class="keyword">return</span> <span class="keyword">true</span>;&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
     <summary type="html">
