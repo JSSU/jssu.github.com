@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Uber | JSSU_Shen</title>
+  <title>FB Newsfeed | JSSU_Shen</title>
   <meta name="author" content="Junsu Shen">
   
   <meta name="description" content="Junsu Shen Blog">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="FB Newsfeed"/>
   <meta property="og:site_name" content="JSSU_Shen"/>
 
   
@@ -101,133 +101,102 @@
   	<div class="content">
     	 
 
-<!-- title -->
-<div class="page-header">
-  <h1 class="archive-title-tag">Uber</h1>
+
+	
+		<div class="page-header">		
+			<h1> FB Newsfeed</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <blockquote><p>Facebook 每天有5亿活跃用户。每个用户可以更新自己的状态消息。当用户登录Facebook时，”新鲜事“会显示用户好友们最近两周内的状态消息。消息为纯文本顺序主要由时间决定，但是也受到好友关系，消息重要性，好友当前消息和上一条消息的间隔，等等的因素影响。试设计”新鲜事“功能的系统架构。假设每台服务器有64GB内存，2TB硬盘，试估算该系统总共需要多少服务器.(这仍然是一个开放性的问题,会根据你的设计而提出后续问题.）</p>
+</blockquote>
+<p><img src="https://scontent-iad3-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/10346613_10204510158449550_4442268752029060499_n.jpg?oh=caf5bb9adbceb4dc39575e332da78719&amp;oe=55FFA1C6" alt="FB链接截图Architectur"><br><a id="more"></a><br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://www.aosabook.org/en/distsys.html</span></span><br></pre></td></tr></table></figure></p>
+<blockquote><p>随便抛块砖。<br>如你所说，没有标准答案，不同面试官心里可能装着不同的答案，你要尽可能顺着对方思路走。多问问题澄清假设，给出多种选择让对方决定详细说哪一个。其实因为用户的状态更新一旦提交，在整个生命周期就是只读状态，（如果允许删除状态更新的话会增加复杂性，这里暂不考虑）所以处理起来相对复杂性并不高。我觉得需要考虑的有以下几点：<br>1）确定需要处理的数据规模。假定FB有10亿用户，里面有1亿每天登陆的活跃用户需要看到update，平均每个人每天看到50条更新。10亿用户中平均每两周有5000万会发布状态更新，平均每人每周10次，每条更新需要50个字节的存储和传送（内容＋timestamp+uid+updateId)。这些都是我的假设，需要对方confirm.如果对方认可，那每天需要传送到活跃用户wall上的数据是50Byte <em> 100M </em> 50 =250G bytes ， 约为 3MB/second。考虑到要能处理spike，可以设计传输的capacity为10MB/second.存储系统只需存储过去两周的数据，50M <em> 10 </em> 50byte = 25GB，考虑p</p>
+</blockquote>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/06/07/Design/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
 </div>
 
-<div class="row page">
-  <!-- cols -->
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+
   
-  <div class="col-md-9">
+</section>
+
 	
-
-	  <div class="archive">
-		
-		
-		
-			
-			
-			<h4 class="archive-ul" data-toggle="collapse" data-target="#2015">2015<b class="caret"></b></h4>
-			<ul id="2015" class="collapse in">
-			
-		
-		<li class="listing-item">
-		<span class="date_class"> 2015-06-07 </span> &raquo;
-		
-		   <span class="title"><a href="/2015/06/07/Timestamp/" >Timestamp</a></span>
-		
-		</li>			
-		
-		</ul>
-		</div>
-
-</div> <!-- col-md-9/col-md-12 -->
-
-
-<div class="col-md-3">
-	<div id="sidebar">
+	</div> <!-- col-md-9/col-md-12 -->
 	
-			<div class="form-group has-success has-feedback">
-  <form action="//google.com/search" method="get" accept-charset="utf-8" >
-    <input type="search" name="q" results="0" placeholder="Search" class="form-control">
-    <input type="hidden" name="q" value="site:jssu.github.io">	
-  </form>
-</div>
+	
+		<div class="col-md-3"> 
 
-		
-			
-	<div class="widget">
-		<h4>Categories</h4>
-		<ul class="tag_box inline list-unstyled">
-		
-			<li><a href="/categories/学习/">学习<span>3</span></a></li>
-		
-			<li><a href="/categories/生活/">生活<span>1</span></a></li>
-		
-		</ul>
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015-06-07 
 	</div>
+	
 
-		
-			
-	<div class="widget">
-		<h4>Tag Cloud</h4>
-		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/文章/">文章<span>1</span></a></li>
-		
-			<li><a href="/tags/LeetCode/">LeetCode<span>1</span></a></li>
-		
-			<li><a href="/tags/Design/">Design<span>2</span></a></li>
-		
-			<li><a href="/tags/FB/">FB<span>2</span></a></li>
-		
-			<li><a href="/tags/Uber/">Uber<span>1</span></a></li>
-		
-		 
-		</ul>
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Design/">Design<span>2</span></a></li> <li><a href="/tags/FB/">FB<span>2</span></a></li>
+    </ul>
 	</div>
-
-
 		
-			
-<div class="widget">
-  <h4>Recent Posts</h4>
-  <ul class="entry list-unstyled">
-    
-      <li>
-        <a href="/2015/06/07/newsfeed/" ><i class="fa fa-file-o"></i>FB Newsfeed...</a>
-      </li>
-    
-      <li>
-        <a href="/2015/06/07/Design/"  title="Original from Mitbbs. The orignal post no longer available." ><i class="fa fa-file-o"></i>FB Design Preparation...</a>
-      </li>
-    
-      <li>
-        <a href="/2015/06/07/Timestamp/" ><i class="fa fa-file-o"></i>Timestamp...</a>
-      </li>
-    
-      <li>
-        <a href="/2015/06/06/今天/" ><i class="fa fa-file-o"></i>论底层青年如何逆袭到中上阶层...</a>
-      </li>
-    
-      <li>
-        <a href="/2015/06/04/TreeCode/" ><i class="fa fa-file-o"></i>Code Tree...</a>
-      </li>
-    
-  </ul>
-</div>
 
-		
-			
-<div class="widget">
-	<h4>Links</h4>
-	<ul class="blogroll list-unstyled">
+	<!-- toc -->
+	<div class="meta-widget">
 	
-		<li><i class="fa fa-github"></i><a href="https://github.com/JSSU" title="My Github account." target="_blank"]);">My Github</a></li>
+	</div>
 	
-		<li><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/pub/junsu-shen/25/973/b36" title="My Linkin account." target="_blank"]);">LinkedIn</a></li>
+    <hr>
 	
-	</ul>
-</div>
+</div><!-- col-md-3 -->
 
+	
 
-		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
-
-
-
+</div><!-- row -->
 
 	</div>
   </div>
