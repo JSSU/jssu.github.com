@@ -1,111 +1,27 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <meta charset="utf-8">
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
   
-  <title>论底层青年如何逆袭到中上阶层 | JSSU_Shen</title>
-  <meta name="author" content="Junsu Shen">
+  <title><![CDATA[JSSU_Shen]]></title>
+  <subtitle><![CDATA[宁静致远]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://jssu.github.io//"/>
+  <updated>2015-06-07T01:25:14.000Z</updated>
+  <id>http://jssu.github.io//</id>
   
-  <meta name="description" content="Junsu Shen Blog">
+  <author>
+    <name><![CDATA[Junsu Shen]]></name>
+    
+  </author>
   
+  <generator uri="http://hexo.io/">Hexo</generator>
   
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <meta property="og:title" content="论底层青年如何逆袭到中上阶层"/>
-  <meta property="og:site_name" content="JSSU_Shen"/>
-
-  
-    <meta property="og:image" content="undefined"/>
-  
-
-  
-  
-    <link href="/favicon.png" rel="icon">
-  
-  
-  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-  <script src="/js/jquery-2.0.3.min.js"></script>
-
-  <!-- analytics -->
-  
-
-
-
-</head>
-
- <body>  
-  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		<span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-	  <a class="navbar-brand" href="/">JSSU_Shen</a>
-      <div class="collapse navbar-collapse nav-menu">
-		<ul class="nav navbar-nav">
-		  
-		  <li>
-			<a href="/archives" title="All the articles.">
-			  <i class="fa fa-archive"></i>Archives
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/categories" title="All the categories.">
-			  <i class="fa fa-folder"></i>Categories
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/tags" title="All the tags.">
-			  <i class="fa fa-tags"></i>Tags
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/about" title="About me.">
-			  <i class="fa fa-user"></i>About
-			</a>
-		  </li>
-		  
-		</ul>
-      </div>
-    </div> <!-- container -->
-</nav>
-<div class="clearfix"></div>
-
-  <div class="container">
-  	<div class="content">
-    	 
-
-
-	
-		<div class="page-header">		
-			<h1> 论底层青年如何逆袭到中上阶层</h1>
-		</div>		
-	
-
-
-
-<div class="row post">
-	<!-- cols -->
-	
-	<div class="col-md-9">
-	
-
-			
-
-	<!-- content -->
-	<div class="mypage">		
-	    <p>转：微信号-&gt;灼见</p>
+  <entry>
+    <title><![CDATA[论底层青年如何逆袭到中上阶层]]></title>
+    <link href="http://jssu.github.io/2015/06/06/%E4%BB%8A%E5%A4%A9/"/>
+    <id>http://jssu.github.io/2015/06/06/今天/</id>
+    <published>2015-06-06T22:40:53.000Z</published>
+    <updated>2015-06-07T01:25:14.000Z</updated>
+    <content type="html"><![CDATA[<p>转：微信号-&gt;灼见</p>
 <p>李白曾说自己是李暠九世孙，郭沫若对此考证一番之后，认为李白在吹牛。先不说此事真伪，单说李暠，他是李广十六世孙，东晋年间在敦煌酒泉一带称王，他的两个儿子先后继位后一个战死，一个战败自杀。后来，李暠七世孙李渊建立唐朝。很多改变历史的大人物的出现不是因为祖坟冒青烟，他们做成的那些大事可能是一个家族几代人、十几代人乃至几十代人奋斗不息的结果。</p>
 <p>有些事，即使你选对策略，竭尽全力，直到死你也做不成，你儿子也做不成，直到你孙子长大成人了才有可能做成。也有可能还是做不成，需要你孙子的儿子、孙子们继续为之奋斗不息……<br><a id="more"></a></p>
 <p>一件可能至少要三代人才能做成的事，你家上两代人几乎没有给你打下任何基础，你想靠自己的努力奋斗在短时间内完成，结果很可能是把你自己活活逼疯。</p>
@@ -145,119 +61,71 @@
 <p>对于一个真正的理想青年来说，用游戏者心态去实现理想是人世间最快乐的事。</p>
 <p>还有就是价值观的问题。如果你一个人独自生活，想超越世俗价值观，其难度相对而言要小一些。但如果你结婚生子了，想超越世俗价值观就很难了。只是如果你想革你自己的命，革你家人的命，为了让他们能过上更好的生活，你想获得世俗意义上的成功，那么选择运用超越世俗价值观的方法，要比选择运用遵循世俗价值观的方法更有效。这就是所谓的以出世之心做入世之事。</p>
 <p>以出世之心做入世之事，这是屌丝青年通过自我革命完成逆袭的必由之路。</p>
-	  
-	</div>
-
-	<div>
-  	<center>
-	<div class="pagination">
-<ul class="pagination">
-	 
-		
-          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一頁</a></li>
-        
-
-        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
-
-		
-		   <li class="next"><a href="/2015/06/04/TreeCode/" class="alignright next">下一頁<i class="fa fa-arrow-circle-o-right"></i></a></li>         
-        
-	
-</ul>
-</div>
-
-    </center>
-	</div>
-	
-	<!-- comment -->
-	
-<section id="comment">
-  <h2 class="title">留言</h2>
-
-  
-</section>
-
-	
-	</div> <!-- col-md-9/col-md-12 -->
-	
-	
-		<div class="col-md-3"> 
-
-	<!-- date -->
-	
-	<div class="meta-widget">
-	<i class="fa fa-clock-o"></i>
-	2015-06-06 
-	</div>
-	
-
-	<!-- categories -->
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>转：微信号-&gt;灼见</p>
+<p>李白曾说自己是李暠九世孙，郭沫若对此考证一番之后，认为李白在吹牛。先不说此事真伪，单说李暠，他是李广十六世孙，东晋年间在敦煌酒泉一带称王，他的两个儿子先后继位后一个战死，一个战败自杀。后来，李暠七世孙李渊建立唐朝。很多改变历史的大人物的出现不是因为祖坟冒青烟，他们做成的那些大事可能是一个家族几代人、十几代人乃至几十代人奋斗不息的结果。</p>
+<p>有些事，即使你选对策略，竭尽全力，直到死你也做不成，你儿子也做不成，直到你孙子长大成人了才有可能做成。也有可能还是做不成，需要你孙子的儿子、孙子们继续为之奋斗不息……<br>]]>
     
-	<div class="meta-widget">
-	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
-    <ul id="categorys" class="tag_box list-unstyled collapse in">
-          
-  <li>
-    <li><a href="/categories/生活/">生活<span>1</span></a></li>
-  </li>
-
-    </ul>
-	</div>
-	
-
-	<!-- tags -->
-	
-	<div class="meta-widget">
-	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
-    <ul id="tags" class="tag_box list-unstyled collapse in">	  
-	    
-  <li><a href="/tags/文章/">文章<span>1</span></a></li>
-    </ul>
-	</div>
-		
-
-	<!-- toc -->
-	<div class="meta-widget">
-	
-	</div>
-	
-    <hr>
-	
-</div><!-- col-md-3 -->
-
-	
-
-</div><!-- row -->
-
-	</div>
-  </div>
-  <div class="container-narrow">
-  <footer> <p>
-  &copy; 2015 Junsu Shen
+    </summary>
+    
+      <category term="文章" scheme="http://jssu.github.io/tags/%E6%96%87%E7%AB%A0/"/>
+    
+      <category term="生活" scheme="http://jssu.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
-</p> </footer>
-</div> <!-- container-narrow -->
+  <entry>
+    <title><![CDATA[Code Tree]]></title>
+    <link href="http://jssu.github.io/2015/06/04/TreeCode/"/>
+    <id>http://jssu.github.io/2015/06/04/TreeCode/</id>
+    <published>2015-06-04T22:53:27.000Z</published>
+    <updated>2015-06-05T00:13:49.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="Contains_Duplicate_III">Contains Duplicate III</h3><p>Given an array of integers, find out whether there are two distinct indices i and j in the array such that the difference between nums[i] and nums[j] is at most t and the difference between i and j is at most k.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">struct</span> Node&#123;</span><br><span class="line">        <span class="keyword">long</span> val;  <span class="comment">//t</span></span><br><span class="line">        <span class="keyword">int</span> pos;  <span class="comment">//k</span></span><br><span class="line">        Node * left;</span><br><span class="line">        Node * right;</span><br><span class="line">        Node(<span class="keyword">long</span> v, <span class="keyword">int</span> p)&#123;val=v; pos=p; left=NULL; right=NULL;&#125;&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">insert</span><span class="params">(Node * &amp;root, <span class="keyword">int</span> ks, <span class="keyword">long</span> tz, <span class="keyword">int</span> k, <span class="keyword">int</span> t)</span></span><br><span class="line">    </span>&#123; <span class="keyword">if</span>(!root)</span><br><span class="line">        &#123;root=<span class="keyword">new</span> Node(tz, ks); <span class="keyword">return</span> <span class="keyword">false</span>;&#125;</span><br><span class="line">      <span class="keyword">if</span>(<span class="built_in">abs</span>(<span class="keyword">long</span>(tz-root-&gt;val))&gt;INT_MAX)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">      <span class="keyword">if</span>(ks-root-&gt;pos&lt;=k &amp;&amp; <span class="built_in">abs</span>(tz-root-&gt;val)&lt;=t)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">      <span class="keyword">if</span>(tz&lt; root-&gt;val)</span><br><span class="line">        <span class="keyword">return</span> insert(root-&gt;left, ks, tz, k, t);</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> insert(root-&gt;right, ks, tz, k, t);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">containsNearbyAlmostDuplicate</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> k, <span class="keyword">int</span> t)</span> </span>&#123; </span><br><span class="line">       <span class="keyword">if</span>(nums.empty()) <span class="keyword">return</span> <span class="keyword">false</span>;             <span class="comment">// j-i&lt;=k; [j]-[i]&lt;=t </span></span><br><span class="line">       Node *root=<span class="keyword">new</span> Node((<span class="keyword">long</span>)nums[<span class="number">0</span>],<span class="number">0</span>);      <span class="comment">//k is position, t is nums[];</span></span><br><span class="line">       <span class="keyword">int</span> lenn= nums.size();</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;lenn; i++)</span><br><span class="line">       &#123; <span class="keyword">if</span>(insert(root, i, nums[i], k, t)) </span><br><span class="line">             <span class="keyword">return</span> <span class="keyword">true</span>;&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="Contains_Duplicate_III">Contains Duplicate III</h3><p>Given an array of integers, find out whether there are two distinct indices i ]]>
+    </summary>
+    
+      <category term="LeetCode" scheme="http://jssu.github.io/tags/LeetCode/"/>
+    
+      <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
-<a id="gotop" href="#">   
-  <span>▲</span> 
-</a>
-
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
-
-
-</body>
-   </html>
+  <entry>
+    <title><![CDATA[TestPage]]></title>
+    <link href="http://jssu.github.io/2015/06/03/TestPage/"/>
+    <id>http://jssu.github.io/2015/06/03/TestPage/</id>
+    <published>2015-06-04T00:55:15.000Z</published>
+    <updated>2015-06-04T02:18:38.000Z</updated>
+    <content type="html"><![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> h; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://jssu.github.io/2015/06/03/hello-world/"/>
+    <id>http://jssu.github.io/2015/06/03/hello-world/</id>
+    <published>2015-06-03T22:23:40.000Z</published>
+    <updated>2015-06-03T22:23:40.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    </summary>
+    
+  </entry>
+  
+</feed>
