@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>hashtable | JSSU_Shen</title>
+  <meta name="author" content="Junsu Shen">
+  
+  <meta name="description" content="JSSU_Blog">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="hashtable"/>
+  <meta property="og:site_name" content="JSSU_Shen"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'undefined', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">JSSU_Shen</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Rss feed">
+			  <i class="fa fa-folder"></i>Rss
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> hashtable</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <p>一个字，累，写了1个小时的code</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// This is the text editor interface. </span></span><br><span class="line"><span class="comment">// Anything you type or change here will be seen by the other person in real time.</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;string&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;vector&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ispalindrome</span><span class="params">(<span class="built_in">string</span> s)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> lens=s.size();</span><br><span class="line">    <span class="keyword">if</span>(lens==<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;lens/<span class="number">2</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(s[i]!=s[lens-<span class="number">1</span>-i])</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Write a piece of code to check <span class="keyword">if</span> a given <span class="built_in">string</span> is a palindrome</span><br><span class="line">without reversing the <span class="built_in">string</span>.</span><br><span class="line"></span><br><span class="line">Implement a hashtable.</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> HashNode</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span>: </span><br><span class="line">    <span class="keyword">int</span> key;</span><br><span class="line">    <span class="keyword">int</span> value;</span><br><span class="line">    HashNode * next;</span><br><span class="line">    HashNode(<span class="keyword">int</span> k, <span class="keyword">int</span> v)</span><br><span class="line">    &#123;</span><br><span class="line">        key=k;</span><br><span class="line">        value=v;</span><br><span class="line">        next=NULL;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> TABLE_SIZE = <span class="number">500</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> HashMap&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    HashNode **  htable;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    HashMap()</span><br><span class="line">    &#123;</span><br><span class="line">        htable = <span class="keyword">new</span> HashNode*[TABLE_SIZE];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt; TABLE_SIZE; i++)</span><br><span class="line">        &#123;</span><br><span class="line">             htable[i]=NULL;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">HashFunc</span><span class="params">(<span class="keyword">int</span> key)</span>   </span><br><span class="line"> </span>&#123;</span><br><span class="line">     <span class="keyword">return</span> key % TABLE_SIZE;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">int</span> key, <span class="keyword">int</span> value)</span></span><br><span class="line"> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> hash_val = HashFunc(key);</span><br><span class="line">     HashNode * prev =NULL;</span><br><span class="line">     HashNode * entry =htable[hash_val];</span><br><span class="line">     <span class="keyword">while</span>(entry != NULL)</span><br><span class="line">     &#123;</span><br><span class="line">       prev = entry;</span><br><span class="line">       entry= entry -&gt;next;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">if</span>(entry == NULL)</span><br><span class="line">     &#123;</span><br><span class="line">         entry = <span class="keyword">new</span> HashNode(key, value);</span><br><span class="line">         <span class="keyword">if</span>(prev==NULL)</span><br><span class="line">           htable[hash_val] = entry;</span><br><span class="line">         <span class="keyword">else</span> </span><br><span class="line">           prev-&gt;next=entry;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">else</span></span><br><span class="line">         entry-&gt;value=value;</span><br><span class="line">     </span><br><span class="line"> &#125;</span><br><span class="line"> <span class="function"><span class="keyword">void</span> <span class="title">Remove</span><span class="params">(<span class="keyword">int</span> key)</span></span><br><span class="line"> </span>&#123;  <span class="keyword">int</span> hash_val= HashFunc(key);</span><br><span class="line">    HashNode * entry = htable[hash_val];</span><br><span class="line">    HashNode * prev = NULL;</span><br><span class="line">    <span class="keyword">if</span>(entry == NULL || entry-&gt;key != key)</span><br><span class="line">        &#123;<span class="built_in">cout</span>&lt;&lt; <span class="string">"nothing find for key"</span>&lt;&lt;key&lt;&lt;<span class="string">", or something wrong with the HTB"</span>&lt;&lt;endl;</span><br><span class="line">          <span class="keyword">return</span>;&#125;</span><br><span class="line">    <span class="keyword">while</span>(entry-&gt;next != NULL)</span><br><span class="line">    &#123;</span><br><span class="line">        prev=entry;</span><br><span class="line">        entry = entry -&gt; next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(prev != NULL) </span><br><span class="line">      prev-&gt;next = entry-&gt; next;</span><br><span class="line">    <span class="keyword">delete</span>  entry;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="function"><span class="keyword">bool</span> <span class="title">Search</span><span class="params">(<span class="keyword">int</span> key)</span>       <span class="comment">// true 1, false 0;</span></span><br><span class="line"> </span>&#123;</span><br><span class="line">     <span class="keyword">bool</span> flag = <span class="keyword">false</span>; </span><br><span class="line">     <span class="keyword">int</span> hash_val= HashFunc(key);</span><br><span class="line">     HashNode * entry= htable[hash_val];</span><br><span class="line">     <span class="keyword">while</span>(entry != NULL)</span><br><span class="line">     &#123;</span><br><span class="line">         <span class="keyword">if</span>(entry-&gt;key==key)</span><br><span class="line">             <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">         entry = entry-&gt;next;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> flag;</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/06/07/gf/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015-06-08 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/学习/">学习<span>5</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/VMWare/">VMWare<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+	
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-title="hashtable" data-url="http://jssu.github.io/2015/06/08/hashtable/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+
+
+
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"jssublog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> 
+  &copy; 2015 Junsu Shen
+  
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">
+
+<p>Help from <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>. </p> </footer>
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63840316-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>
