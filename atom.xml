@@ -5,7 +5,7 @@
   <subtitle><![CDATA[宁静致远]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jssu.github.io//"/>
-  <updated>2015-06-13T03:47:33.000Z</updated>
+  <updated>2015-06-16T00:45:41.000Z</updated>
   <id>http://jssu.github.io//</id>
   
   <author>
@@ -16,13 +16,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Vmware Python]]></title>
+    <link href="http://jssu.github.io/2015/06/15/vmware/"/>
+    <id>http://jssu.github.io/2015/06/15/vmware/</id>
+    <published>2015-06-16T00:42:57.000Z</published>
+    <updated>2015-06-16T00:45:41.000Z</updated>
+    <content type="html"><![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;unordered_map&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;stdio.h&gt;   <span class="comment">//strtok()</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;string.h&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> findcol&#123;</span><br><span class="line"><span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; <span class="built_in">map</span>;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">findcol3</span><span class="params">(<span class="keyword">char</span> * c)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    iostream ip=c;</span><br><span class="line">    <span class="keyword">while</span>(!ip.eof())</span><br><span class="line">    &#123;</span><br><span class="line">     <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">     <span class="keyword">char</span> str[]=ip;</span><br><span class="line">     <span class="keyword">char</span> * pch;</span><br><span class="line">     pch=strtok(str,<span class="string">":"</span>);</span><br><span class="line">     <span class="keyword">while</span>(pch != NULL)  <span class="comment">//repeat 2 times</span></span><br><span class="line">     &#123;                                    <span class="comment">/*col1:col2:foo:col4*/</span></span><br><span class="line">         pch=strtok(NULL, <span class="string">":"</span>);          <span class="comment">/*1 pch= col1, 2 */</span></span><br><span class="line">         count++;</span><br><span class="line">         <span class="keyword">if</span>(count==<span class="number">3</span>)</span><br><span class="line">          <span class="built_in">map</span>[pch]++;</span><br><span class="line">     &#125;   </span><br><span class="line">      count=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> x: <span class="built_in">map</span>)</span><br><span class="line">      <span class="built_in">cout</span>&lt;&lt;x-&gt;first&lt;&lt;<span class="string">" repeat"</span>&lt;&lt;x-&gt;second&lt;&lt;<span class="string">" times"</span>&lt;&lt;endl;</span><br><span class="line">   </span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;unordered_map&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;stdio.h&gt;   <span class="comment">//strtok()</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;string.h&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> findcol&#123;</span><br><span class="line"><span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; <span class="built_in">map</span>;</span><br></pre></td></tr></table></figure>]]>
+    
+    </summary>
+    
+      <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[System Design]]></title>
     <link href="http://jssu.github.io/2015/06/12/FB%E8%AE%BE%E8%AE%A12/"/>
     <id>http://jssu.github.io/2015/06/12/FB设计2/</id>
     <published>2015-06-13T03:44:32.000Z</published>
-    <updated>2015-06-13T03:47:33.000Z</updated>
+    <updated>2015-06-16T00:45:18.000Z</updated>
     <content type="html"><![CDATA[<p>转自 mitbbs：<a href="http://www.mitbbs.com/article_t1/JobHunting/32777529_0_6.html" target="_blank" rel="external">http://www.mitbbs.com/article_t1/JobHunting/32777529_0_6.html</a><br>我的面试也结束了 因为知道FLAG这类公司都会问到System Design的问题 所以这次面<br>试着重准备了一下 在这里分享给大家 如果有不对或者需要补充的地方 大家可以留言</p>
-<p>这里说的System Design和OO Design不同 System Design在FLAG以及很多大公司中主要<br>是design scalable distributed systems 这里只讨论如何准备这种题目</p>
+<p>这里说的System Design和OO Design不同 System Design在FLAG以及很多大公司中主要<br>是design scalable distributed systems 这里只讨论如何准备这种题目<br><a id="more"></a></p>
 <p>== 入门 ==<br>对于0基础的同学们 下面的资料可以按顺序开始看</p>
 <ol>
 <li><a href="http://www.hiredintech.com/app#system-design" target="_blank" rel="external">http://www.hiredintech.com/app#system-design</a><br>这是一个专门准备面试的网站 你只用关心system design部分 有很多的link后面会重<br>复提到 建议看完至少一遍</li>
@@ -64,7 +83,9 @@
 <p>答案是it depends. 有的公司会考system design 有的公司只考到OO design 有的公司<br>压根不考 当然 考到的公司对new grad的期望值会稍微低一点 但是 你有这么一个机会<br>能让你gain leverage over other candidates why not? 为什么要让自己在面试前害怕<br>面试官出system design的题目呢?</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>转自 mitbbs：<a href="http://www.mitbbs.com/article_t1/JobHunting/32777529_0_6.html" target="_blank" rel="external">http://www.mitbbs.com/ar]]>
+    <![CDATA[<p>转自 mitbbs：<a href="http://www.mitbbs.com/article_t1/JobHunting/32777529_0_6.html">http://www.mitbbs.com/article_t1/JobHunting/32777529_0_6.html</a><br>我的面试也结束了 因为知道FLAG这类公司都会问到System Design的问题 所以这次面<br>试着重准备了一下 在这里分享给大家 如果有不对或者需要补充的地方 大家可以留言</p>
+<p>这里说的System Design和OO Design不同 System Design在FLAG以及很多大公司中主要<br>是design scalable distributed systems 这里只讨论如何准备这种题目<br>]]>
+    
     </summary>
     
       <category term="Design" scheme="http://jssu.github.io/tags/Design/"/>
