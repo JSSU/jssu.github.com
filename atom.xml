@@ -5,7 +5,7 @@
   <subtitle><![CDATA[宁静致远]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jssu.github.io//"/>
-  <updated>2015-06-16T23:30:48.000Z</updated>
+  <updated>2015-06-16T23:34:06.000Z</updated>
   <id>http://jssu.github.io//</id>
   
   <author>
@@ -20,10 +20,9 @@
     <link href="http://jssu.github.io/2015/06/16/Treeconnect/"/>
     <id>http://jssu.github.io/2015/06/16/Treeconnect/</id>
     <published>2015-06-16T23:28:01.000Z</published>
-    <updated>2015-06-16T23:30:48.000Z</updated>
+    <updated>2015-06-16T23:34:06.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>Given a binary tree<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> TreeLinkNode &#123;</span><br><span class="line">  TreeLinkNode *left;</span><br><span class="line">  TreeLinkNode *right;</span><br><span class="line">  TreeLinkNode *next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
 <p>Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.</p>
 <p>Initially, all next pointers are set to NULL.<br>/**</p>
 <ul>
@@ -35,32 +34,11 @@
 <li>};<br>*/<a id="more"></a>
 </li>
 </ul>
-<p>class Solution<br>{<br>public:<br>    void connect( TreeLinkNode <em> root )<br>    {<br>        TreeLinkNode </em> nextLevel = root;<br>        if( root )<br>        {<br>           /*准备：需要一个next level的指针存left</p>
-<pre><code>         <span class="number">1.</span> 一直向左一直到没有左了
-         <span class="number">2.</span> 判断如果有左，把左边和右边连起来。然后判断
-           （<span class="number">1</span>）如果有<span class="keyword">next</span>，把root右边跟root-&gt;<span class="keyword">next</span>左边连起来。然后把root移到<span class="keyword">next</span>
-           （<span class="number">2</span>）如果没有<span class="keyword">next</span>，nextlevel往左移然后root指向nextlevel（指回来）*/
-
-        <span class="keyword">while</span>(root-&gt;<span class="built_in">left</span>)                   
-        {
-            <span class="keyword">if</span>( root-&gt;<span class="built_in">left</span> )
-                root-&gt;<span class="built_in">left</span>-&gt;<span class="keyword">next</span> = root-&gt;<span class="built_in">right</span>;
-            <span class="keyword">if</span>( root-&gt;<span class="keyword">next</span> )
-            {
-                root-&gt;<span class="built_in">right</span>-&gt;<span class="keyword">next</span> = root-&gt;<span class="keyword">next</span>-&gt;<span class="built_in">left</span>;
-                root = root-&gt;<span class="keyword">next</span>;
-            }
-            <span class="keyword">else</span>
-                root = nextLevel = nextLevel-&gt;<span class="built_in">left</span>;
-        }
-    }
-}
-</code></pre><p>};</p>
-]]></content>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">connect</span><span class="params">( TreeLinkNode * root )</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        TreeLinkNode * nextLevel = root;</span><br><span class="line">        <span class="keyword">if</span>( root )</span><br><span class="line">        &#123;</span><br><span class="line">           <span class="comment">/*准备：需要一个next level的指针存left</span><br><span class="line">             1. 一直向左一直到没有左了</span><br><span class="line">             2. 判断如果有左，把左边和右边连起来。然后判断</span><br><span class="line">               （1）如果有next，把root右边跟root-&gt;next左边连起来。然后把root移到next</span><br><span class="line">               （2）如果没有next，nextlevel往左移然后root指向nextlevel（指回来）*/</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">while</span>(root-&gt;left)                   </span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>( root-&gt;left )</span><br><span class="line">                    root-&gt;left-&gt;next = root-&gt;right;</span><br><span class="line">                <span class="keyword">if</span>( root-&gt;next )</span><br><span class="line">                &#123;</span><br><span class="line">                    root-&gt;right-&gt;next = root-&gt;next-&gt;left;</span><br><span class="line">                    root = root-&gt;next;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    root = nextLevel = nextLevel-&gt;left;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
     <summary type="html">
     <![CDATA[<blockquote>
 <p>Given a binary tree<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> TreeLinkNode &#123;</span><br><span class="line">  TreeLinkNode *left;</span><br><span class="line">  TreeLinkNode *right;</span><br><span class="line">  TreeLinkNode *next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
 <p>Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.</p>
 <p>Initially, all next pointers are set to NULL.<br>/**</p>
 <ul>
