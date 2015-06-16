@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="Leetcode," />
 
 
 
@@ -47,7 +47,7 @@
 
 
 
-  <title> TestPage // JSSU_Shen </title>
+  <title> Tree Connect // JSSU_Shen </title>
 </head>
 
 <body>
@@ -142,7 +142,7 @@
           
           
             
-              TestPage
+              Tree Connect
             
           
         </h1>
@@ -150,7 +150,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2015-06-03
+          Posted on 2015-06-16
         </span>
 
         
@@ -159,8 +159,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/03/TestPage/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/06/03/TestPage/"></span>
+            <a href="/2015/06/16/Treeconnect/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/06/16/Treeconnect/"></span>
             </a>
           </span>
           
@@ -174,24 +174,63 @@
       
 
       
-        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> h; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>Given a binary tree<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> TreeLinkNode &#123;</span><br><span class="line">  TreeLinkNode *left;</span><br><span class="line">  TreeLinkNode *right;</span><br><span class="line">  TreeLinkNode *next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.</p>
+<p>Initially, all next pointers are set to NULL.<br>/**</p>
+<ul>
+<li>Definition for binary tree with next pointer.</li>
+<li>struct TreeLinkNode {</li>
+<li>int val;</li>
+<li>TreeLinkNode <em>left, </em>right, *next;</li>
+<li>TreeLinkNode(int x) : val(x), left(NULL), right(NULL), next(NULL) {}</li>
+<li>};<br>*/<a id="more"></a>
+</li>
+</ul>
+<p>class Solution<br>{<br>public:<br>    void connect( TreeLinkNode <em> root )<br>    {<br>        TreeLinkNode </em> nextLevel = root;<br>        if( root )<br>        {<br>           /*准备：需要一个next level的指针存left</p>
+<pre><code>         <span class="number">1.</span> 一直向左一直到没有左了
+         <span class="number">2.</span> 判断如果有左，把左边和右边连起来。然后判断
+           （<span class="number">1</span>）如果有<span class="keyword">next</span>，把root右边跟root-&gt;<span class="keyword">next</span>左边连起来。然后把root移到<span class="keyword">next</span>
+           （<span class="number">2</span>）如果没有<span class="keyword">next</span>，nextlevel往左移然后root指向nextlevel（指回来）*/
+
+        <span class="keyword">while</span>(root-&gt;<span class="built_in">left</span>)                   
+        {
+            <span class="keyword">if</span>( root-&gt;<span class="built_in">left</span> )
+                root-&gt;<span class="built_in">left</span>-&gt;<span class="keyword">next</span> = root-&gt;<span class="built_in">right</span>;
+            <span class="keyword">if</span>( root-&gt;<span class="keyword">next</span> )
+            {
+                root-&gt;<span class="built_in">right</span>-&gt;<span class="keyword">next</span> = root-&gt;<span class="keyword">next</span>-&gt;<span class="built_in">left</span>;
+                root = root-&gt;<span class="keyword">next</span>;
+            }
+            <span class="keyword">else</span>
+                root = nextLevel = nextLevel-&gt;<span class="built_in">left</span>;
+        }
+    }
+}
+</code></pre><p>};</p>
+
       
     </div>
 
     <div class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Leetcode/"> #Leetcode </a>
+          
+        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/04/TreeCode/">Code Tree</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/03/hello-world/">Hello World</a>
+              <a href="/2015/06/15/vmware/">Vmware Python</a>
             
           </div>
         </div>
@@ -528,9 +567,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'jssublog';
-      var disqus_identifier = '2015/06/03/TestPage/';
-      var disqus_title = 'TestPage';
-      var disqus_url = 'http://jssu.github.io/2015/06/03/TestPage/';
+      var disqus_identifier = '2015/06/16/Treeconnect/';
+      var disqus_title = 'Tree Connect';
+      var disqus_url = 'http://jssu.github.io/2015/06/16/Treeconnect/';
 
       (function(){
         var dsq = document.createElement('script');
