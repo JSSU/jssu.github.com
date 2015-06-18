@@ -177,18 +177,16 @@
         <blockquote>
 <p>Given a binary tree<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> TreeLinkNode &#123;</span><br><span class="line">  TreeLinkNode *left;</span><br><span class="line">  TreeLinkNode *right;</span><br><span class="line">  TreeLinkNode *next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.</p>
-<p>Initially, all next pointers are set to NULL.<br>/**</p>
-<ul>
-<li>Definition for binary tree with next pointer.</li>
-<li>struct TreeLinkNode {</li>
-<li>int val;</li>
-<li>TreeLinkNode <em>left, </em>right, *next;</li>
-<li>TreeLinkNode(int x) : val(x), left(NULL), right(NULL), next(NULL) {}</li>
-<li>};<br>*/<a id="more"></a>
-</li>
-</ul>
+<p>Initially, all next pointers are set to NULL.</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">connect</span><span class="params">( TreeLinkNode * root )</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        TreeLinkNode * nextLevel = root;</span><br><span class="line">        <span class="keyword">if</span>( root )</span><br><span class="line">        &#123;</span><br><span class="line">           <span class="comment">/*准备：需要一个next level的指针存left</span><br><span class="line">             1. 一直向左一直到没有左了</span><br><span class="line">             2. 判断如果有左，把左边和右边连起来。然后判断</span><br><span class="line">               （1）如果有next，把root右边跟root-&gt;next左边连起来。然后把root移到next</span><br><span class="line">               （2）如果没有next，nextlevel往左移然后root指向nextlevel（指回来）*/</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">while</span>(root-&gt;left)                   </span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>( root-&gt;left )</span><br><span class="line">                    root-&gt;left-&gt;next = root-&gt;right;</span><br><span class="line">                <span class="keyword">if</span>( root-&gt;next )</span><br><span class="line">                &#123;</span><br><span class="line">                    root-&gt;right-&gt;next = root-&gt;next-&gt;left;</span><br><span class="line">                    root = root-&gt;next;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    root = nextLevel = nextLevel-&gt;left;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>  Definition for binary tree with next pointer.<br>  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> TreeLinkNode &#123;</span><br><span class="line"> <span class="keyword">int</span> val;</span><br><span class="line"> TreeLinkNode *left, *right, *next;</span><br><span class="line"> TreeLinkNode(<span class="keyword">int</span> x) : val(x), left(NULL), right(NULL), next(NULL) &#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>准备：需要一个next level的指针存left</p>
+<pre><code><span class="number">1</span>. 一直向左一直到没有左了
+<span class="number">2</span>. 判断如果有左，把左边和右边连起来。然后判断
+  #如果有<span class="keyword">next</span>，把root右边跟root-&gt;<span class="keyword">next</span>左边连起来。然后把root移到<span class="keyword">next</span>
+  #如果没有<span class="keyword">next</span>，nextlevel往左移然后root指向nextlevel（指回来）
+</code></pre><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">connect</span><span class="params">( TreeLinkNode * root )</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        TreeLinkNode * nextLevel = root;</span><br><span class="line">        <span class="keyword">if</span>( root )</span><br><span class="line">        &#123;    </span><br><span class="line">            <span class="keyword">while</span>(root-&gt;left)                   </span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>( root-&gt;left )</span><br><span class="line">                    root-&gt;left-&gt;next = root-&gt;right;</span><br><span class="line">                <span class="keyword">if</span>( root-&gt;next )</span><br><span class="line">                &#123;</span><br><span class="line">                    root-&gt;right-&gt;next = root-&gt;next-&gt;left;</span><br><span class="line">                    root = root-&gt;next;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    root = nextLevel = nextLevel-&gt;left;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -204,6 +202,8 @@
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/06/17/a/">来FB</a>
             
           </div>
 
@@ -273,7 +273,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
