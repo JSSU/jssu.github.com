@@ -5,7 +5,7 @@
   <subtitle><![CDATA[宁静致远]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jssu.github.io//"/>
-  <updated>2015-06-18T01:26:20.000Z</updated>
+  <updated>2015-06-20T19:18:34.000Z</updated>
   <id>http://jssu.github.io//</id>
   
   <author>
@@ -16,10 +16,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[a]]></title>
+    <link href="http://jssu.github.io/2015/06/20/FB%E5%BA%94%E8%AF%A5%E5%BD%95%E4%BA%86%E5%90%A7/"/>
+    <id>http://jssu.github.io/2015/06/20/FB应该录了吧/</id>
+    <published>2015-06-20T19:15:55.000Z</published>
+    <updated>2015-06-20T19:18:34.000Z</updated>
+    <content type="html"><![CDATA[<p>我很满意自己的面试。加油！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>我很满意自己的面试。加油！</p>
+]]>
+    </summary>
+    
+      <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="生活" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[来FB]]></title>
-    <link href="http://jssu.github.io/2015/06/17/a/"/>
-    <id>http://jssu.github.io/2015/06/17/a/</id>
-    <published>2015-06-18T01:24:02.000Z</published>
+    <link href="http://jssu.github.io/2015/06/17/FBInterview/"/>
+    <id>http://jssu.github.io/2015/06/17/FBInterview/</id>
+    <published>2015-06-18T04:24:02.000Z</published>
     <updated>2015-06-18T01:26:20.000Z</updated>
     <content type="html"><![CDATA[<p>一句话！加油！</p>
 ]]></content>
@@ -36,7 +55,7 @@
     <title><![CDATA[Tree Connect]]></title>
     <link href="http://jssu.github.io/2015/06/16/Treeconnect/"/>
     <id>http://jssu.github.io/2015/06/16/Treeconnect/</id>
-    <published>2015-06-16T23:28:01.000Z</published>
+    <published>2015-06-17T02:28:01.000Z</published>
     <updated>2015-06-16T23:39:01.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>Given a binary tree<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> TreeLinkNode &#123;</span><br><span class="line">  TreeLinkNode *left;</span><br><span class="line">  TreeLinkNode *right;</span><br><span class="line">  TreeLinkNode *next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -69,7 +88,7 @@
     <title><![CDATA[Vmware Python]]></title>
     <link href="http://jssu.github.io/2015/06/15/vmware/"/>
     <id>http://jssu.github.io/2015/06/15/vmware/</id>
-    <published>2015-06-16T00:42:57.000Z</published>
+    <published>2015-06-16T03:42:57.000Z</published>
     <updated>2015-06-16T19:47:02.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>// This is the text editor interface.<br>// Anything you type or change here will be seen by the other person in real time.<br>col1:col2:col3:col4<br>col1:col2:foo:col4 \n col1:col2:bar:col4 \n col1:col2:baz:col4<br>col1:col2:foo:col4<br>col1:col2:foo:col4<br>col1:col2:bar:col4</p>
@@ -95,7 +114,7 @@
     <title><![CDATA[System Design]]></title>
     <link href="http://jssu.github.io/2015/06/12/FB%E8%AE%BE%E8%AE%A12/"/>
     <id>http://jssu.github.io/2015/06/12/FB设计2/</id>
-    <published>2015-06-13T03:44:32.000Z</published>
+    <published>2015-06-13T06:44:32.000Z</published>
     <updated>2015-06-16T00:45:18.000Z</updated>
     <content type="html"><![CDATA[<p>转自 mitbbs：<a href="http://www.mitbbs.com/article_t1/JobHunting/32777529_0_6.html" target="_blank" rel="external">http://www.mitbbs.com/article_t1/JobHunting/32777529_0_6.html</a><br>我的面试也结束了 因为知道FLAG这类公司都会问到System Design的问题 所以这次面<br>试着重准备了一下 在这里分享给大家 如果有不对或者需要补充的地方 大家可以留言</p>
 <p>这里说的System Design和OO Design不同 System Design在FLAG以及很多大公司中主要<br>是design scalable distributed systems 这里只讨论如何准备这种题目<br><a id="more"></a></p>
@@ -157,7 +176,7 @@
     <title><![CDATA[张翠山 殷素素 偷来的那十年]]></title>
     <link href="http://jssu.github.io/2015/06/11/%E5%81%B7%E6%9D%A5%E7%9A%84%E9%82%A3%E5%8D%81%E5%B9%B4/"/>
     <id>http://jssu.github.io/2015/06/11/偷来的那十年/</id>
-    <published>2015-06-12T03:20:06.000Z</published>
+    <published>2015-06-12T06:20:06.000Z</published>
     <updated>2015-06-12T03:58:30.000Z</updated>
     <content type="html"><![CDATA[<p>转载-from 简书，作者 西湘 <a href="http://www.jianshu.com/p/9ec421d5c7b8" target="_blank" rel="external">http://www.jianshu.com/p/9ec421d5c7b8</a></p>
 <p>&lt;倚天屠龙记&gt;是我看的第一部金庸小说，那时大概才十来岁，很多情节都看不太懂，而且胆子还巨小，看到龙门镖局满庭死尸时一颗小心脏几乎就要破胸而出。而紧接着画风一转，月光下，一个身穿淡绿衫子的少女抱膝独坐船头，望着天边初升的眉月，本来急于追凶的张五侠却突然放下大事，跟这个姑娘开始谈起情说起爱来。那时候不知情为何物，只觉得很是奇怪，这个姑娘为什么要假冒张翠山杀人全家，张翠山知道是她冒名所杀以后为什么又不予追究，很多年以后我才知道，这个叫作“爱情”东西就是这样，你并不知道它是什么时候萌发的，等到你发现的时候已经情根深重无法自拔了。<br><a id="more"></a><br>殷素素的出场跟黄蓉首次女装出场有一点像，她们倾心的都是敦厚君子，两个少女都一般的冰雪聪明容光逼人，如凌波仙子般驾着一叶扁舟与男主角相见。不同的是黄蓉的出场是让人眼前一亮、心头一热，而殷素素的出场是让人眼前一亮、心头一惊。黄蓉换女装约见郭靖前干了一件小“坏”事，把黄河四鬼吊在林子里逗郭靖开心，而殷姑娘出场前也干了一件坏事，不过是大坏事，杀了龙门镖局七十二口，两下一对比便能遥观两对恋人此后的结局了。</p>
@@ -194,7 +213,7 @@
     <title><![CDATA[hashtable]]></title>
     <link href="http://jssu.github.io/2015/06/08/hashtable/"/>
     <id>http://jssu.github.io/2015/06/08/hashtable/</id>
-    <published>2015-06-08T22:16:11.000Z</published>
+    <published>2015-06-09T01:16:11.000Z</published>
     <updated>2015-06-08T22:48:09.000Z</updated>
     <content type="html"><![CDATA[<p>一个字，累，写了1个小时的code</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// This is the text editor interface. </span></span><br><span class="line"><span class="comment">// Anything you type or change here will be seen by the other person in real time.</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;string&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;vector&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ispalindrome</span><span class="params">(<span class="built_in">string</span> s)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> lens=s.size();</span><br><span class="line">    <span class="keyword">if</span>(lens==<span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;lens/<span class="number">2</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(s[i]!=s[lens-<span class="number">1</span>-i])</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Write a piece of code to check <span class="keyword">if</span> a given <span class="built_in">string</span> is a palindrome</span><br><span class="line">without reversing the <span class="built_in">string</span>.</span><br><span class="line"></span><br><span class="line">Implement a hashtable.</span><br></pre></td></tr></table></figure>
@@ -217,7 +236,7 @@
     <title><![CDATA[GF]]></title>
     <link href="http://jssu.github.io/2015/06/07/gf/"/>
     <id>http://jssu.github.io/2015/06/07/gf/</id>
-    <published>2015-06-08T03:48:29.000Z</published>
+    <published>2015-06-08T06:48:29.000Z</published>
     <updated>2015-06-08T03:54:37.000Z</updated>
     <content type="html"><![CDATA[<p><img src="https://scontent-iad3-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/10258515_1492803327606377_4726714035170089888_n.jpg?oh=d7416c39d1d1a7c57f953b42244b52fc&amp;oe=5631187C" alt="百媚生"></p>
 ]]></content>
@@ -235,7 +254,7 @@
     <title><![CDATA[Terminal]]></title>
     <link href="http://jssu.github.io/2015/06/07/Terminal/"/>
     <id>http://jssu.github.io/2015/06/07/Terminal/</id>
-    <published>2015-06-07T23:12:01.000Z</published>
+    <published>2015-06-08T02:12:01.000Z</published>
     <updated>2015-06-07T23:13:38.000Z</updated>
     <content type="html"><![CDATA[<p>在bin中创建sublime：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s <span class="regexp">/Applications/</span>Sublime\ Text.app<span class="regexp">/Contents/</span>SharedSupport<span class="regexp">/bin/</span>subl <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>sublime</span><br></pre></td></tr></table></figure></p>
 ]]></content>
@@ -253,7 +272,7 @@
     <title><![CDATA[FB Newsfeed]]></title>
     <link href="http://jssu.github.io/2015/06/07/newsfeed/"/>
     <id>http://jssu.github.io/2015/06/07/newsfeed/</id>
-    <published>2015-06-07T19:31:23.000Z</published>
+    <published>2015-06-07T22:31:23.000Z</published>
     <updated>2015-06-07T21:25:20.000Z</updated>
     <content type="html"><![CDATA[<blockquote><p>Facebook 每天有5亿活跃用户。每个用户可以更新自己的状态消息。当用户登录Facebook时，”新鲜事“会显示用户好友们最近两周内的状态消息。消息为纯文本顺序主要由时间决定，但是也受到好友关系，消息重要性，好友当前消息和上一条消息的间隔，等等的因素影响。试设计”新鲜事“功能的系统架构。假设每台服务器有64GB内存，2TB硬盘，试估算该系统总共需要多少服务器.(这仍然是一个开放性的问题,会根据你的设计而提出后续问题.）</p>
 </blockquote>
@@ -278,7 +297,7 @@
     <title><![CDATA[FB Design Preparation]]></title>
     <link href="http://jssu.github.io/2015/06/07/Design/"/>
     <id>http://jssu.github.io/2015/06/07/Design/</id>
-    <published>2015-06-07T17:58:50.000Z</published>
+    <published>2015-06-07T20:58:50.000Z</published>
     <updated>2015-06-07T20:52:59.000Z</updated>
     <content type="html"><![CDATA[<ol>
 <li>入门级的news feed</li>
@@ -347,7 +366,7 @@
     <title><![CDATA[Timestamp]]></title>
     <link href="http://jssu.github.io/2015/06/07/Timestamp/"/>
     <id>http://jssu.github.io/2015/06/07/Timestamp/</id>
-    <published>2015-06-07T05:06:11.000Z</published>
+    <published>2015-06-07T08:06:11.000Z</published>
     <updated>2015-06-07T20:52:20.000Z</updated>
     <content type="html"><![CDATA[<p> Example:<br>     timestamp: 1 ‘key’ ‘value1’<br>     timestamp: 2 ‘key’ ‘value2’<br>     timestamp: 3 ‘key’ ‘value3’<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">1</span>)</span> -&gt;</span> value1</span><br><span class="line"><span class="string">'key'</span> @ timestamp <span class="number">1</span><span class="function"> -&gt;</span> value1</span><br><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">2</span>)</span> -&gt;</span> value1</span><br><span class="line"><span class="string">'key'</span> @ timestamp <span class="number">2</span><span class="function"> -&gt;</span> value2</span><br><span class="line"><span class="string">'key'</span> @ timestamp <span class="number">1.5</span><span class="function"> -&gt;</span> value1</span><br><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">3</span>)</span> --&gt;</span> ??? value3</span><br><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">0</span>)</span> --&gt;</span> ??? <span class="number">0</span> <span class="keyword">or</span> <span class="literal">undefined</span></span><br><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">10</span>)</span> --&gt;</span> ??? value3</span><br></pre></td></tr></table></figure></p>
 <p>要求设计<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">void <span class="operator"><span class="keyword">set</span>(<span class="built_in">int</span> <span class="keyword">timestamp</span>, <span class="keyword">string</span> <span class="keyword">key</span>, <span class="built_in">int</span> val)</span><br><span class="line"><span class="built_in">int</span> <span class="keyword">get</span>(<span class="built_in">int</span> t, <span class="keyword">string</span> <span class="keyword">key</span>)</span></span><br></pre></td></tr></table></figure></p>
@@ -372,7 +391,7 @@
     <title><![CDATA[论底层青年如何逆袭到中上阶层]]></title>
     <link href="http://jssu.github.io/2015/06/06/%E4%BB%8A%E5%A4%A9/"/>
     <id>http://jssu.github.io/2015/06/06/今天/</id>
-    <published>2015-06-06T22:40:53.000Z</published>
+    <published>2015-06-07T01:40:53.000Z</published>
     <updated>2015-06-07T20:52:18.000Z</updated>
     <content type="html"><![CDATA[<p>转：微信号-&gt;灼见</p>
 <p>李白曾说自己是李暠九世孙，郭沫若对此考证一番之后，认为李白在吹牛。先不说此事真伪，单说李暠，他是李广十六世孙，东晋年间在敦煌酒泉一带称王，他的两个儿子先后继位后一个战死，一个战败自杀。后来，李暠七世孙李渊建立唐朝。很多改变历史的大人物的出现不是因为祖坟冒青烟，他们做成的那些大事可能是一个家族几代人、十几代人乃至几十代人奋斗不息的结果。</p>
@@ -432,7 +451,7 @@
     <title><![CDATA[Code Tree]]></title>
     <link href="http://jssu.github.io/2015/06/04/TreeCode/"/>
     <id>http://jssu.github.io/2015/06/04/TreeCode/</id>
-    <published>2015-06-04T22:53:27.000Z</published>
+    <published>2015-06-05T01:53:27.000Z</published>
     <updated>2015-06-07T18:07:03.000Z</updated>
     <content type="html"><![CDATA[<h3 id="Contains_Duplicate_III">Contains Duplicate III</h3><p>Given an array of integers, find out whether there are two distinct indices i and j in the array such that the difference between nums[i] and nums[j] is at most t and the difference between i and j is at most k.<br>        <a id="more"></a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">struct</span> Node&#123;</span><br><span class="line">        <span class="keyword">long</span> val;  <span class="comment">//t</span></span><br><span class="line">        <span class="keyword">int</span> pos;  <span class="comment">//k</span></span><br><span class="line">        Node * left;</span><br><span class="line">        Node * right;</span><br><span class="line">        Node(<span class="keyword">long</span> v, <span class="keyword">int</span> p)&#123;val=v; pos=p; left=NULL; right=NULL;&#125;&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">insert</span><span class="params">(Node * &amp;root, <span class="keyword">int</span> ks, <span class="keyword">long</span> tz, <span class="keyword">int</span> k, <span class="keyword">int</span> t)</span></span><br><span class="line">    </span>&#123; <span class="keyword">if</span>(!root)</span><br><span class="line">        &#123;root=<span class="keyword">new</span> Node(tz, ks); <span class="keyword">return</span> <span class="keyword">false</span>;&#125;</span><br><span class="line">      <span class="keyword">if</span>(<span class="built_in">abs</span>(<span class="keyword">long</span>(tz-root-&gt;val))&gt;INT_MAX)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">      <span class="keyword">if</span>(ks-root-&gt;pos&lt;=k &amp;&amp; <span class="built_in">abs</span>(tz-root-&gt;val)&lt;=t)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">      <span class="keyword">if</span>(tz&lt; root-&gt;val)</span><br><span class="line">        <span class="keyword">return</span> insert(root-&gt;left, ks, tz, k, t);</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> insert(root-&gt;right, ks, tz, k, t);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">containsNearbyAlmostDuplicate</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> k, <span class="keyword">int</span> t)</span> </span>&#123; </span><br><span class="line">       <span class="keyword">if</span>(nums.empty()) <span class="keyword">return</span> <span class="keyword">false</span>;             <span class="comment">// j-i&lt;=k; [j]-[i]&lt;=t </span></span><br><span class="line">       Node *root=<span class="keyword">new</span> Node((<span class="keyword">long</span>)nums[<span class="number">0</span>],<span class="number">0</span>);      <span class="comment">//k is position, t is nums[];</span></span><br><span class="line">       <span class="keyword">int</span> lenn= nums.size();</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;lenn; i++)</span><br><span class="line">       &#123; <span class="keyword">if</span>(insert(root, i, nums[i], k, t)) </span><br><span class="line">             <span class="keyword">return</span> <span class="keyword">true</span>;&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
@@ -451,7 +470,7 @@
     <title><![CDATA[TestPage]]></title>
     <link href="http://jssu.github.io/2015/06/03/TestPage/"/>
     <id>http://jssu.github.io/2015/06/03/TestPage/</id>
-    <published>2015-06-04T00:55:15.000Z</published>
+    <published>2015-06-04T03:55:15.000Z</published>
     <updated>2015-06-04T02:18:38.000Z</updated>
     <content type="html"><![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> h; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     <summary type="html">
@@ -464,7 +483,7 @@
     <title><![CDATA[Hello World]]></title>
     <link href="http://jssu.github.io/2015/06/03/hello-world/"/>
     <id>http://jssu.github.io/2015/06/03/hello-world/</id>
-    <published>2015-06-03T10:55:30.000Z</published>
+    <published>2015-06-03T13:55:30.000Z</published>
     <updated>2015-06-07T16:19:44.000Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
