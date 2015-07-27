@@ -5,7 +5,7 @@
   <subtitle><![CDATA[宁静致远]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jssu.github.io//"/>
-  <updated>2015-07-17T00:41:24.000Z</updated>
+  <updated>2015-07-27T18:14:46.000Z</updated>
   <id>http://jssu.github.io//</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Python Dict]]></title>
+    <link href="http://jssu.github.io/2015/07/27/python_dict/"/>
+    <id>http://jssu.github.io/2015/07/27/python_dict/</id>
+    <published>2015-07-27T18:14:46.000Z</published>
+    <updated>2015-07-27T18:14:46.000Z</updated>
+    <content type="html"><![CDATA[<p>Python dict的定义方法：</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>a = dict(one=1, two=2, three=3)<br>b = {‘one’: 1, ‘two’: 2, ‘three’: 3}<br>c = dict(zip([‘one’, ‘two’, ‘three’], [1, 2, 3]))<br>d = dict([(‘two’, 2), (‘one’, 1), (‘three’, 3)])<br>e = dict({‘three’: 3, ‘one’: 1, ‘two’: 2})</p>
+</blockquote>
+</blockquote>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Python dict的定义方法：</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>a = dict(one=1, two=2, three=3)<br>b = {‘one’: 1, ‘two’: 2, ‘three’: 3}<b]]>
+    </summary>
+    
+      <category term="Python" scheme="http://jssu.github.io/tags/Python/"/>
+    
+      <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[傲慢-狗镇]]></title>
@@ -886,19 +915,6 @@
       <category term="LeetCode" scheme="http://jssu.github.io/tags/LeetCode/"/>
     
       <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[TestPage]]></title>
-    <link href="http://jssu.github.io/2015/06/03/TestPage/"/>
-    <id>http://jssu.github.io/2015/06/03/TestPage/</id>
-    <published>2015-06-04T00:55:15.000Z</published>
-    <updated>2015-06-04T02:18:38.000Z</updated>
-    <content type="html"><![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> h; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    <summary type="html">
-    <![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="]]>
-    </summary>
     
   </entry>
   
