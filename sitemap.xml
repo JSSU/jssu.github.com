@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jssu.github.io/2015/07/08/git_commit/</loc>
+    <lastmod>2015-08-01T18:16:04.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jssu.github.io/2015/07/27/python_dict/</loc>
-    <lastmod>2015-07-27T18:14:46.000Z</lastmod>
+    <lastmod>2015-07-27T18:23:31.000Z</lastmod>
   </url>
   
   <url>
