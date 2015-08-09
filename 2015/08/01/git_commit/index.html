@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="LeetCode," />
+  <meta name="keywords" content="Github," />
 
 
 
@@ -47,7 +47,7 @@
 
 
 
-  <title> Code Tree // JSSU_Shen </title>
+  <title> How to commit in git // JSSU_Shen </title>
 </head>
 
 <body>
@@ -142,7 +142,7 @@
           
           
             
-              Code Tree
+              How to commit in git
             
           
         </h1>
@@ -150,7 +150,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2015-06-04
+          Posted on 2015-08-01
         </span>
 
         
@@ -170,8 +170,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/04/TreeCode/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/06/04/TreeCode/"></span>
+            <a href="/2015/08/01/git_commit/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/01/git_commit/"></span>
             </a>
           </span>
           
@@ -185,8 +185,12 @@
       
 
       
-        <h3 id="Contains_Duplicate_III">Contains Duplicate III</h3><p>Given an array of integers, find out whether there are two distinct indices i and j in the array such that the difference between nums[i] and nums[j] is at most t and the difference between i and j is at most k.<br>        <a id="more"></a><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">struct</span> Node&#123;</span><br><span class="line">        <span class="keyword">long</span> val;  <span class="comment">//t</span></span><br><span class="line">        <span class="keyword">int</span> pos;  <span class="comment">//k</span></span><br><span class="line">        Node * left;</span><br><span class="line">        Node * right;</span><br><span class="line">        Node(<span class="keyword">long</span> v, <span class="keyword">int</span> p)&#123;val=v; pos=p; left=NULL; right=NULL;&#125;&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">insert</span><span class="params">(Node * &amp;root, <span class="keyword">int</span> ks, <span class="keyword">long</span> tz, <span class="keyword">int</span> k, <span class="keyword">int</span> t)</span></span><br><span class="line">    </span>&#123; <span class="keyword">if</span>(!root)</span><br><span class="line">        &#123;root=<span class="keyword">new</span> Node(tz, ks); <span class="keyword">return</span> <span class="keyword">false</span>;&#125;</span><br><span class="line">      <span class="keyword">if</span>(<span class="built_in">abs</span>(<span class="keyword">long</span>(tz-root-&gt;val))&gt;INT_MAX)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">      <span class="keyword">if</span>(ks-root-&gt;pos&lt;=k &amp;&amp; <span class="built_in">abs</span>(tz-root-&gt;val)&lt;=t)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">      <span class="keyword">if</span>(tz&lt; root-&gt;val)</span><br><span class="line">        <span class="keyword">return</span> insert(root-&gt;left, ks, tz, k, t);</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> insert(root-&gt;right, ks, tz, k, t);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">containsNearbyAlmostDuplicate</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> k, <span class="keyword">int</span> t)</span> </span>&#123; </span><br><span class="line">       <span class="keyword">if</span>(nums.empty()) <span class="keyword">return</span> <span class="keyword">false</span>;             <span class="comment">// j-i&lt;=k; [j]-[i]&lt;=t </span></span><br><span class="line">       Node *root=<span class="keyword">new</span> Node((<span class="keyword">long</span>)nums[<span class="number">0</span>],<span class="number">0</span>);      <span class="comment">//k is position, t is nums[];</span></span><br><span class="line">       <span class="keyword">int</span> lenn= nums.size();</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;lenn; i++)</span><br><span class="line">       &#123; <span class="keyword">if</span>(insert(root, i, nums[i], k, t)) </span><br><span class="line">             <span class="keyword">return</span> <span class="keyword">true</span>;&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-
+        <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> init</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line"></span><br><span class="line"># Adds the files <span class="keyword">in</span> the local repository <span class="keyword">and</span> stages them <span class="keyword">for</span> commit. <span class="keyword">To</span> unstage a <span class="keyword">file</span>, <span class="keyword">use</span> <span class="attribute">'git</span> reset HEAD YOUR-<span class="keyword">FILE</span>'.</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="operator"><span class="keyword">commit</span> -m <span class="string">'First commit'</span></span><br><span class="line"># Commits the tracked changes <span class="keyword">and</span> prepares them <span class="keyword">to</span> be pushed <span class="keyword">to</span> a remote repository. <span class="keyword">To</span> remove this <span class="keyword">commit</span> <span class="keyword">and</span> modify the file, <span class="keyword">use</span> <span class="string">'git reset --soft HEAD~1'</span> <span class="keyword">and</span> <span class="keyword">commit</span> <span class="keyword">and</span> <span class="keyword">add</span> the file again.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="built_in">add</span> origin remote repository <span class="built_in">URL</span></span><br><span class="line"><span class="comment"># Sets the new remote</span></span><br><span class="line">git remote -v</span><br><span class="line"><span class="comment"># Verifies the new remote URL</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> push origin master</span><br><span class="line"><span class="comment"># Pushes the changes in your local repository up to the remote repository you specified as the origin</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -194,7 +198,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/LeetCode/"> #LeetCode </a>
+            <a href="/tags/Github/"> #Github </a>
           
         </div>
       
@@ -203,13 +207,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/06/论底层青年如何逆袭到中上层/">论底层青年如何逆袭到中上阶层</a>
+              <a href="/2015/08/09/wordbreakerii/">Word Breaker II</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/03/TestPage/">TestPage</a>
+              <a href="/2015/07/27/python_dict/">Python Dict</a>
             
           </div>
         </div>
@@ -318,7 +322,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Contains_Duplicate_III"><span class="nav-number">1.</span> <span class="nav-text">Contains Duplicate III</span></a></li></ol></div>
+              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -546,9 +550,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'jssublog';
-      var disqus_identifier = '2015/06/04/TreeCode/';
-      var disqus_title = 'Code Tree';
-      var disqus_url = 'http://jssu.github.io/2015/06/04/TreeCode/';
+      var disqus_identifier = '2015/08/01/git_commit/';
+      var disqus_title = 'How to commit in git';
+      var disqus_url = 'http://jssu.github.io/2015/08/01/git_commit/';
 
       (function(){
         var dsq = document.createElement('script');
