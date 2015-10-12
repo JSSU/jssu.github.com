@@ -680,6 +680,45 @@
   </entry>
   
   <entry>
+    <title><![CDATA[AngularNote]]></title>
+    <link href="http://jssu.github.io/2015/06/11/AngularJS/"/>
+    <id>http://jssu.github.io/2015/06/11/AngularJS/</id>
+    <published>2015-06-12T03:20:06.000Z</published>
+    <updated>2015-10-12T16:04:33.000Z</updated>
+    <content type="html"><![CDATA[<p>AngularJS connect to Database:<br><a id="more"></a></p>
+<p>AngularJS connect to Database:<br>Single Page Applications can generally be said to be entirely client-side, that is, the HTML that is displayed to the end-user is generated on the client itself through Javascript.</p>
+<p>When you want to work with a shared back-end database server you would write a web-service (presumably using a RESTful JSON endpoint, as that’s what all the cool kids are using thesedays, no love for XML and SOAP :/ ) and you would then use XmlHttpRequest to make requests to this webservice which then performs the CRUD database operations for you.</p>
+<p>自己在前端开发中还有很多新知识要学习，今天开始进入《用 AngularJS 开发下一代 Web 应用》一书的学习之旅。</p>
+<p>AngularJS是一款开源 JavaScript函式库，由Google维护, 主要用于单页面应用开发。 目标是增强基于浏览器的应用，并带有MVC模式功能，这为了使得开发和测试变得更加容易。</p>
+<p>一些概念<br>客户端模板</p>
+<p>传统的 web 应用会在服务器中创建 HTML，然后和数据生成页面一起发送到浏览器中。 而现在单页面应用则会把模板存放在客户端中，而服务器则是仅仅为这些模板提供静态资源和数据。</p>
+<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">hello world：</span><br><span class="line"></span><br><span class="line"><span class="doctype">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span> <span class="attribute">ng-app</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span>hello<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"assets/angular.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">ng-model</span>=<span class="value">"name"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">h2</span>&gt;</span>Hello </span><span class="expression">&#123;&#123;<span class="variable">name</span>&#125;&#125;</span><span class="xml">!<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>从 hello world 中可以看到：</p>
+<p>html 里没有 class 或者 ID 来标记哪里添加事件。<br>数据绑定，改变数据页面也会随之改变。<br>Model View Controller (MVC)</p>
+<p>MVC 的核心理念：把管理数据的代码（model）、应用逻辑代码（controller）和展示数据的代码（view）清晰的分离开。</p>
+<p>AngularJS 中，视图是 Document Object Model（DOM，文档对象模型），控制器为 JavaScript 类，模型数据被存储在对象的属性中。</p>
+<p>数据绑定</p>
+<p>使用 jQuery 开发，我们会把获取的数据插入到 DOM 中，或者直接操作 DOM 的内容。</p>
+<p>而在 AngularJS 中，仅仅声明 UI 中的 DOM 映射到某个 JavaScript 属性，然后修改 JavaScript 属性，就可以自动更新 DOM 中的值。</p>
+<p>依赖注入</p>
+<p>开发风格：类只是简单的获取所需要的东西，并不需要创建所需要的东西。这种风格叫迪米特法则，也叫最小知识原则。</p>
+<p>例如：$scope 对象表示 Controller 模型中的内部状态；$location 对象表示浏览器 URL 地址状态。</p>
+<p>指令</p>
+<p>AngularJS 引入了强大的 DOM 转换引擎，用来扩展 HTML 语法。</p>
+<p>如：<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="variable">&#123;&#123;&#125;&#125;</span><span class="xml">：表示数据绑定</span><br><span class="line">ng-controller：指定控制器范围</span><br><span class="line">ng-model：把输入数据绑定到模型的属性上</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>AngularJS connect to Database:<br>]]>
+    
+    </summary>
+    
+      <category term="前端" scheme="http://jssu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[张翠山 殷素素 偷来的那十年]]></title>
     <link href="http://jssu.github.io/2015/06/11/%E5%81%B7%E6%9D%A5%E7%9A%84%E9%82%A3%E5%8D%81%E5%B9%B4/"/>
     <id>http://jssu.github.io/2015/06/11/偷来的那十年/</id>
@@ -797,75 +836,6 @@
       <category term="Design" scheme="http://jssu.github.io/tags/Design/"/>
     
       <category term="FB" scheme="http://jssu.github.io/tags/FB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[FB Design Preparation]]></title>
-    <link href="http://jssu.github.io/2015/06/07/Design/"/>
-    <id>http://jssu.github.io/2015/06/07/Design/</id>
-    <published>2015-06-07T17:58:50.000Z</published>
-    <updated>2015-06-07T20:52:59.000Z</updated>
-    <content type="html"><![CDATA[<ol>
-<li>入门级的news feed</li>
-</ol>
-<p><a href="http://www.infoq.com/presentations/Scale-at-Facebook" target="_blank" rel="external">http://www.infoq.com/presentations/Scale-at-Facebook</a>  （check）<br><a href="http://www.infoq.com/presentations/Facebook-Software-Stack" target="_blank" rel="external">http://www.infoq.com/presentations/Facebook-Software-Stack</a><br>一般的followup question是估算需要多少server<br>另外这个帖子有讨论<br><a href="http://www.mitbbs.ca/article_t/JobHunting/32463885.html" target="_blank" rel="external">http://www.mitbbs.ca/article_t/JobHunting/32463885.html</a><br>这篇文章稍微提到要怎么approach这种题，可以稍微看看<br><a href="http://book.douban.com/reading/23757677/" target="_blank" rel="external">http://book.douban.com/reading/23757677/</a></p>
-<a id="more"></a>
-<ol>
-<li>facebook chat,这个也算是挺常问的<br><a href="http://www.erlang-factory.com/upload/presentations/31/EugeneLet" target="_blank" rel="external">http://www.erlang-factory.com/upload/presentations/31/EugeneLet</a></li>
-</ol>
-<p><a href="https://www.facebook.com/note.php?note_id=14218138919" target="_blank" rel="external">https://www.facebook.com/note.php?note_id=14218138919</a></p>
-<p><a href="http://www.cnblogs.com/piaoger/archive/2012/08/19/2646530.html" target="_blank" rel="external">http://www.cnblogs.com/piaoger/archive/2012/08/19/2646530.html</a><br><a href="http://essay.utwente.nl/59204/1/scriptie_J_Schipers.pdf" target="_blank" rel="external">http://essay.utwente.nl/59204/1/scriptie_J_Schipers.pdf</a></p>
-<ol>
-<li>typeahead search/search suggestion，这个也常见</li>
-</ol>
-<p><a href="https://www.facebook.com/video/video.php?v=432864835468" target="_blank" rel="external">https://www.facebook.com/video/video.php?v=432864835468</a></p>
-<p>问题在这个帖子里被讨论到，基本上每个问题，在视频里都有回答<br><a href="http://www.mitbbs.com/article_t/JobHunting/32438927.html" target="_blank" rel="external">http://www.mitbbs.com/article_t/JobHunting/32438927.html</a></p>
-<ol>
-<li>任给一个手机的位置信号(经纬度)，需要返回附近5mile 的POI<br>这个这里有讨论，这题貌似nyc很爱考…<br><a href="http://www.mitbbs.ca/article0/JobHunting/32476139_0.html" target="_blank" rel="external">http://www.mitbbs.ca/article0/JobHunting/32476139_0.html</a></li>
-</ol>
-<ol>
-<li>Implement second/minute/hour/day counters<br>这题真不觉得是system design，但万一问道，还是要有准备，貌似在总部面试会被问<br>道….<br>这个帖子有讨论<br><a href="http://www.mitbbs.com/article_t/JobHunting/32458451.html" target="_blank" rel="external">http://www.mitbbs.com/article_t/JobHunting/32458451.html</a></li>
-</ol>
-<ol>
-<li>facebook photo storage，这个不太会被问起，但是知道也不错</li>
-</ol>
-<p><a href="https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Beaver.pdf" target="_blank" rel="external">https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Beaver.pdf</a></p>
-<p><a href="https://www.facebook.com/note.php?note_id=76191543919" target="_blank" rel="external">https://www.facebook.com/note.php?note_id=76191543919</a></p>
-<ol>
-<li>facebook timeline,这个也不太是个考题，看看就行了</li>
-</ol>
-<p><a href="https://www.facebook.com/note.php?note_id=10150468255628920" target="_blank" rel="external">https://www.facebook.com/note.php?note_id=10150468255628920</a></p>
-<p><a href="http://highscalability.com/blog/2012/1/23/facebook-timeline-bro" target="_blank" rel="external">http://highscalability.com/blog/2012/1/23/facebook-timeline-bro</a></p>
-<p>除了这些，准备一下这些题目<br>implement memcache<br><a href="http://www.adayinthelifeof.nl/2011/02/06/memcache-internals/" target="_blank" rel="external">http://www.adayinthelifeof.nl/2011/02/06/memcache-internals/</a></p>
-<p>implement tinyurl（以及distribute across multiple servers)<br><a href="http://stackoverflow.com/questions/742013/how-to-code-a-url-sho" target="_blank" rel="external">http://stackoverflow.com/questions/742013/how-to-code-a-url-sho</a></p>
-<p>determine trending topics(twitter)<br><a href="http://www.americanscientist.org/issues/pub/the-britney-spears-" target="_blank" rel="external">http://www.americanscientist.org/issues/pub/the-britney-spears-</a><br><a href="http://www.michael-noll.com/blog/2013/01/18/implementing-real-t" target="_blank" rel="external">http://www.michael-noll.com/blog/2013/01/18/implementing-real-t</a></p>
-<p>copy one file to multiple servers<br><a href="http://vimeo.com/11280885" target="_blank" rel="external">http://vimeo.com/11280885</a></p>
-<p>稍微知道一下dynamo key value store，以及google的gfs和big table</p>
-<p>其他家的<br><a href="http://www.quora.com/What-are-the-top-startup-engineering-blogs" target="_blank" rel="external">http://www.quora.com/What-are-the-top-startup-engineering-blogs</a></p>
-<p>==================================================================<br>在说说怎么准备这样的面试<br>首先如果你连availability/scalability/consistency/partition之类的都不是太有概<br>念的话，我建议先去wikipedia或者找一个某个大学讲这门课的网站稍微看一下，别一<br>点都不知道<br>这个链接也不错<br><a href="http://www.aosabook.org/en/distsys.html" target="_blank" rel="external">http://www.aosabook.org/en/distsys.html</a></p>
-<p>如果你这些基本的东西都不还知道，那么我觉得你就和大部分毫无实际经验的人差不多一<br>个水平…<br>能做的就是一点一点去准备，如果你还有充足的时间的话，建议从你面试的那家公司的<br>engineering blog看起，把人家用的technology stack/product都搞清楚，然后在把能<br>找到的面试题都做一遍呗….我们做coding题说白了不也是题海战术…而且你如果坚<br>持看下去，真的会看出心得，你会发现很多地方都有相同之处，看多了就也能照葫芦画<br>瓢了…</p>
-<p>再有就是面试的时候应该怎么去approach这种题，我说说我的做法</p>
-<ol>
-<li>product spec/usage scenario 和面试者confirm这个东西到底是做什么的<br>可以先列出来几个major functionality，然后有时间的话，再补充一些不重要的<br>把你想的都写下来</li>
-</ol>
-<ol>
-<li>define some major components<br>就是画几个圈圈框框的，每个发表一番您的高见….然后讲他们之间怎么interact</li>
-</ol>
-<p>以上是question specific的东西，<br>这个讲完了，我们可以讲一些每道题都是用的，比如说<br>怎么scale/怎么partition/怎么实现consistency，这些东西，可以套用到任何题上</p>
-<p>当然了，我们遇到的题和解题的方法可能都有些出入，不见得每道题有一个路数下来，<br>最重要的是，讲题的时候要有条理，画图要清楚，保持和面试官的交流，随时问一下人<br>家的意见。</p>
-<p>我能想到的就这么多，欢迎大家交流，希望大家都能找到理想的工作.</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[Original from Mitbbs. The orignal post no longer available.]]>
-    
-    </summary>
-    
-      <category term="Design" scheme="http://jssu.github.io/tags/Design/"/>
-    
-      <category term="FB" scheme="http://jssu.github.io/tags/FB/"/>
-    
-      <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
