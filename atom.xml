@@ -39,6 +39,48 @@
   </entry>
   
   <entry>
+    <title><![CDATA[AngularNote]]></title>
+    <link href="http://jssu.github.io/2015/10/12/AngularJS/"/>
+    <id>http://jssu.github.io/2015/10/12/AngularJS/</id>
+    <published>2015-10-13T03:20:06.000Z</published>
+    <updated>2015-10-12T16:21:59.000Z</updated>
+    <content type="html"><![CDATA[<p>AngularJS connect to Database:<br><a id="more"></a></p>
+<p>AngularJS connect to Database:<br>Single Page Applications can generally be said to be entirely client-side, that is, the HTML that is displayed to the end-user is generated on the client itself through Javascript.</p>
+<p>When you want to work with a shared back-end database server you would write a web-service (presumably using a RESTful JSON endpoint, as that’s what all the cool kids are using thesedays, no love for XML and SOAP :/ ) and you would then use XmlHttpRequest to make requests to this webservice which then performs the CRUD database operations for you.</p>
+<p>自己在前端开发中还有很多新知识要学习，今天开始进入《用 AngularJS 开发下一代 Web 应用》一书的学习之旅。</p>
+<p>AngularJS是一款开源 JavaScript函式库，由Google维护, 主要用于单页面应用开发。 目标是增强基于浏览器的应用，并带有MVC模式功能，这为了使得开发和测试变得更加容易。</p>
+<p>一些概念<br>客户端模板</p>
+<p>传统的 web 应用会在服务器中创建 HTML，然后和数据生成页面一起发送到浏览器中。 而现在单页面应用则会把模板存放在客户端中，而服务器则是仅仅为这些模板提供静态资源和数据。</p>
+<p>有种方法：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$scope</span>.addBook = <span class="function"><span class="keyword">function</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">http(&#123;</span><br><span class="line"></span><br><span class="line">method : <span class="string">'POST'</span>,</span><br><span class="line">url: <span class="string">'index.php?urls'</span>,</span><br><span class="line">data: &#123;book_name : <span class="variable">$scope</span>.bookName, book_price : <span class="variable">$scope</span>.bookPrice&#125;,</span><br><span class="line">headers : &#123;<span class="string">'Content-type'</span> : <span class="string">'application/json'</span>&#125; </span><br><span class="line">&#125;).success(<span class="function"><span class="keyword">function</span><span class="params">(data, status, headers, config)</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(data.success)</span><br><span class="line">&#123; </span><br><span class="line"><span class="variable">$scope</span>.books.push(data); </span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">&#125;).error(<span class="function"><span class="keyword">function</span><span class="params">(data, status, headers, config)</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//set error message.</span></span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>addBook() is one of the method in view site. The addBook() method call to controller site.</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ex:</span><br><span class="line">&lt;<span class="tag">button</span> ng-click = <span class="string">"addBook()"</span> &gt;Add book &lt;/button&gt;</span><br><span class="line">book_name, book_price  -&gt; books <span class="tag">table</span> column names.</span><br><span class="line"><span class="variable">$scope</span><span class="class">.bookName</span> , <span class="variable">$scope</span><span class="class">.bookPrice</span> -&gt; <span class="tag">html</span> textbox ngmodel name. </span><br><span class="line"></span><br><span class="line">ex:</span><br><span class="line">&lt;<span class="tag">input</span> type=<span class="string">"text"</span> ng-model=<span class="string">"bookName"</span>&gt;</span><br><span class="line">&lt;<span class="tag">input</span> type=<span class="string">"text"</span> ng-model=<span class="string">"bookPrice"</span>&gt;</span><br><span class="line">Touch with me! Gain more!</span><br></pre></td></tr></table></figure>
+<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">hello world：</span><br><span class="line"></span><br><span class="line"><span class="doctype">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span> <span class="attribute">ng-app</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span>hello<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"assets/angular.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">ng-model</span>=<span class="value">"name"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">h2</span>&gt;</span>Hello </span><span class="expression">&#123;&#123;<span class="variable">name</span>&#125;&#125;</span><span class="xml">!<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>从 hello world 中可以看到：</p>
+<p>html 里没有 class 或者 ID 来标记哪里添加事件。<br>数据绑定，改变数据页面也会随之改变。<br>Model View Controller (MVC)</p>
+<p>MVC 的核心理念：把管理数据的代码（model）、应用逻辑代码（controller）和展示数据的代码（view）清晰的分离开。</p>
+<p>AngularJS 中，视图是 Document Object Model（DOM，文档对象模型），控制器为 JavaScript 类，模型数据被存储在对象的属性中。</p>
+<p>数据绑定</p>
+<p>使用 jQuery 开发，我们会把获取的数据插入到 DOM 中，或者直接操作 DOM 的内容。</p>
+<p>而在 AngularJS 中，仅仅声明 UI 中的 DOM 映射到某个 JavaScript 属性，然后修改 JavaScript 属性，就可以自动更新 DOM 中的值。</p>
+<p>依赖注入</p>
+<p>开发风格：类只是简单的获取所需要的东西，并不需要创建所需要的东西。这种风格叫迪米特法则，也叫最小知识原则。</p>
+<p>例如：$scope 对象表示 Controller 模型中的内部状态；$location 对象表示浏览器 URL 地址状态。</p>
+<p>指令</p>
+<p>AngularJS 引入了强大的 DOM 转换引擎，用来扩展 HTML 语法。</p>
+<p>如：<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="variable">&#123;&#123;&#125;&#125;</span><span class="xml">：表示数据绑定</span><br><span class="line">ng-controller：指定控制器范围</span><br><span class="line">ng-model：把输入数据绑定到模型的属性上</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>AngularJS connect to Database:<br>]]>
+    
+    </summary>
+    
+      <category term="前端" scheme="http://jssu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Word Breaker II]]></title>
     <link href="http://jssu.github.io/2015/08/09/wordbreakerii/"/>
     <id>http://jssu.github.io/2015/08/09/wordbreakerii/</id>
@@ -674,48 +716,6 @@
       <category term="Design" scheme="http://jssu.github.io/tags/Design/"/>
     
       <category term="FB" scheme="http://jssu.github.io/tags/FB/"/>
-    
-      <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[AngularNote]]></title>
-    <link href="http://jssu.github.io/2015/06/11/AngularJS/"/>
-    <id>http://jssu.github.io/2015/06/11/AngularJS/</id>
-    <published>2015-06-12T03:20:06.000Z</published>
-    <updated>2015-10-12T16:14:57.000Z</updated>
-    <content type="html"><![CDATA[<p>AngularJS connect to Database:<br><a id="more"></a></p>
-<p>AngularJS connect to Database:<br>Single Page Applications can generally be said to be entirely client-side, that is, the HTML that is displayed to the end-user is generated on the client itself through Javascript.</p>
-<p>When you want to work with a shared back-end database server you would write a web-service (presumably using a RESTful JSON endpoint, as that’s what all the cool kids are using thesedays, no love for XML and SOAP :/ ) and you would then use XmlHttpRequest to make requests to this webservice which then performs the CRUD database operations for you.</p>
-<p>自己在前端开发中还有很多新知识要学习，今天开始进入《用 AngularJS 开发下一代 Web 应用》一书的学习之旅。</p>
-<p>AngularJS是一款开源 JavaScript函式库，由Google维护, 主要用于单页面应用开发。 目标是增强基于浏览器的应用，并带有MVC模式功能，这为了使得开发和测试变得更加容易。</p>
-<p>一些概念<br>客户端模板</p>
-<p>传统的 web 应用会在服务器中创建 HTML，然后和数据生成页面一起发送到浏览器中。 而现在单页面应用则会把模板存放在客户端中，而服务器则是仅仅为这些模板提供静态资源和数据。</p>
-<p>有种方法：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$scope</span>.addBook = <span class="function"><span class="keyword">function</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">http(&#123;</span><br><span class="line"></span><br><span class="line">method : <span class="string">'POST'</span>,</span><br><span class="line">url: <span class="string">'index.php?urls'</span>,</span><br><span class="line">data: &#123;book_name : <span class="variable">$scope</span>.bookName, book_price : <span class="variable">$scope</span>.bookPrice&#125;,</span><br><span class="line">headers : &#123;<span class="string">'Content-type'</span> : <span class="string">'application/json'</span>&#125; </span><br><span class="line">&#125;).success(<span class="function"><span class="keyword">function</span><span class="params">(data, status, headers, config)</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(data.success)</span><br><span class="line">&#123; </span><br><span class="line"><span class="variable">$scope</span>.books.push(data); </span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">&#125;).error(<span class="function"><span class="keyword">function</span><span class="params">(data, status, headers, config)</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//set error message.</span></span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>addBook() is one of the method in view site. The addBook() method call to controller site.</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ex:</span><br><span class="line">&lt;<span class="tag">button</span> ng-click = <span class="string">"addBook()"</span> &gt;Add book &lt;/button&gt;</span><br><span class="line">book_name, book_price  -&gt; books <span class="tag">table</span> column names.</span><br><span class="line"><span class="variable">$scope</span><span class="class">.bookName</span> , <span class="variable">$scope</span><span class="class">.bookPrice</span> -&gt; <span class="tag">html</span> textbox ngmodel name. </span><br><span class="line"></span><br><span class="line">ex:</span><br><span class="line">&lt;<span class="tag">input</span> type=<span class="string">"text"</span> ng-model=<span class="string">"bookName"</span>&gt;</span><br><span class="line">&lt;<span class="tag">input</span> type=<span class="string">"text"</span> ng-model=<span class="string">"bookPrice"</span>&gt;</span><br><span class="line">Touch with me! Gain more!</span><br></pre></td></tr></table></figure>
-<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">hello world：</span><br><span class="line"></span><br><span class="line"><span class="doctype">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span> <span class="attribute">ng-app</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span>hello<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"assets/angular.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">ng-model</span>=<span class="value">"name"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">h2</span>&gt;</span>Hello </span><span class="expression">&#123;&#123;<span class="variable">name</span>&#125;&#125;</span><span class="xml">!<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>从 hello world 中可以看到：</p>
-<p>html 里没有 class 或者 ID 来标记哪里添加事件。<br>数据绑定，改变数据页面也会随之改变。<br>Model View Controller (MVC)</p>
-<p>MVC 的核心理念：把管理数据的代码（model）、应用逻辑代码（controller）和展示数据的代码（view）清晰的分离开。</p>
-<p>AngularJS 中，视图是 Document Object Model（DOM，文档对象模型），控制器为 JavaScript 类，模型数据被存储在对象的属性中。</p>
-<p>数据绑定</p>
-<p>使用 jQuery 开发，我们会把获取的数据插入到 DOM 中，或者直接操作 DOM 的内容。</p>
-<p>而在 AngularJS 中，仅仅声明 UI 中的 DOM 映射到某个 JavaScript 属性，然后修改 JavaScript 属性，就可以自动更新 DOM 中的值。</p>
-<p>依赖注入</p>
-<p>开发风格：类只是简单的获取所需要的东西，并不需要创建所需要的东西。这种风格叫迪米特法则，也叫最小知识原则。</p>
-<p>例如：$scope 对象表示 Controller 模型中的内部状态；$location 对象表示浏览器 URL 地址状态。</p>
-<p>指令</p>
-<p>AngularJS 引入了强大的 DOM 转换引擎，用来扩展 HTML 语法。</p>
-<p>如：<br><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="variable">&#123;&#123;&#125;&#125;</span><span class="xml">：表示数据绑定</span><br><span class="line">ng-controller：指定控制器范围</span><br><span class="line">ng-model：把输入数据绑定到模型的属性上</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>AngularJS connect to Database:<br>]]>
-    
-    </summary>
-    
-      <category term="前端" scheme="http://jssu.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
