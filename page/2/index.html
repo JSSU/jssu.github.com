@@ -144,6 +144,76 @@
           
           
             
+              <a class="post-title-link" href="/2015/06/24/wordbreak/">
+                wordbreak
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-06-24
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/06/24/wordbreak/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/06/24/wordbreak/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; m;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; combine(<span class="built_in">string</span> word, <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; prev)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;prev.size();++i)&#123;</span><br><span class="line">            prev[i]+=<span class="string">" "</span>+word;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> prev;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; wordBreak(<span class="built_in">string</span> s, <span class="built_in">unordered_set</span>&lt;<span class="built_in">string</span>&gt;&amp; dict) &#123;</span><br><span class="line">        <span class="keyword">if</span>(m.count(s)) <span class="keyword">return</span> m[s]; <span class="comment">//take from memory</span></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; result;</span><br><span class="line">        <span class="keyword">if</span>(dict.count(s))&#123; <span class="comment">//a whole string is a word</span></span><br><span class="line">            result.push_back(s);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;s.size();++i)&#123;</span><br><span class="line">            <span class="built_in">string</span> word=s.substr(i);</span><br><span class="line">            <span class="keyword">if</span>(dict.count(word))&#123;</span><br><span class="line">                <span class="built_in">string</span> rem=s.substr(<span class="number">0</span>,i);</span><br><span class="line">                <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; prev=combine(word,wordBreak(rem,dict));</span><br><span class="line">                result.insert(result.end(),prev.begin(), prev.end());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        m[s]=result; <span class="comment">//memorize</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/06/24/wordbreak/#more">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2015/06/22/心灵鸡汤都是假的/">
                 心灵鸡汤都是假的
               </a>
@@ -854,83 +924,6 @@
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/06/07/Terminal/">
-                Terminal
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2015-06-07
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/学习/">学习</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/06/07/Terminal/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/06/07/Terminal/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>在bin中创建sublime：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s <span class="regexp">/Applications/</span>Sublime\ Text.app<span class="regexp">/Contents/</span>SharedSupport<span class="regexp">/bin/</span>subl <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>sublime</span><br></pre></td></tr></table></figure></p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -969,7 +962,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">28</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1027,7 +1020,7 @@
   </span>
   <span class="author">Junsu Shen</span>
 </div>
-
+<!--
 <div class="powered-by">
   Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
@@ -1038,6 +1031,7 @@
     NexT.Mist
   </a>
 </div>
+-->
 
 
 

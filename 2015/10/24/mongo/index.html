@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="笔记Notes," />
 
 
 
@@ -47,7 +47,7 @@
 
 
 
-  <title> wordbreak // JSSU_Shen </title>
+  <title> MongoDB // JSSU_Shen </title>
 </head>
 
 <body>
@@ -142,7 +142,7 @@
           
           
             
-              wordbreak
+              MongoDB
             
           
         </h1>
@@ -150,17 +150,28 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2015-06-24
+          Posted on 2015-10-24
         </span>
 
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/学习/">学习</a>
+
+              
+              
+
+            
+          </span>
         
 
         
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/24/wordbreak/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/06/24/wordbreak/"></span>
+            <a href="/2015/10/24/mongo/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/24/mongo/"></span>
             </a>
           </span>
           
@@ -174,27 +185,78 @@
       
 
       
-        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; m;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; combine(<span class="built_in">string</span> word, <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; prev)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;prev.size();++i)&#123;</span><br><span class="line">            prev[i]+=<span class="string">" "</span>+word;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> prev;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; wordBreak(<span class="built_in">string</span> s, <span class="built_in">unordered_set</span>&lt;<span class="built_in">string</span>&gt;&amp; dict) &#123;</span><br><span class="line">        <span class="keyword">if</span>(m.count(s)) <span class="keyword">return</span> m[s]; <span class="comment">//take from memory</span></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; result;</span><br><span class="line">        <span class="keyword">if</span>(dict.count(s))&#123; <span class="comment">//a whole string is a word</span></span><br><span class="line">            result.push_back(s);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;s.size();++i)&#123;</span><br><span class="line">            <span class="built_in">string</span> word=s.substr(i);</span><br><span class="line">            <span class="keyword">if</span>(dict.count(word))&#123;</span><br><span class="line">                <span class="built_in">string</span> rem=s.substr(<span class="number">0</span>,i);</span><br><span class="line">                <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; prev=combine(word,wordBreak(rem,dict));</span><br><span class="line">                result.insert(result.end(),prev.begin(), prev.end());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        m[s]=result; <span class="comment">//memorize</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; wordBreak(<span class="built_in">string</span> s, <span class="built_in">unordered_set</span>&lt;<span class="built_in">string</span>&gt; &amp;dict) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; res;</span><br><span class="line">        <span class="keyword">if</span> (dict.size() == <span class="number">0</span>) <span class="keyword">return</span> res;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; spaceIdx;</span><br><span class="line">        spaceIdx.resize(s.size() + <span class="number">1</span>);</span><br><span class="line">        spaceIdx[<span class="number">0</span>].push_back(-<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= s.size(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (spaceIdx[j].size() &amp;&amp; dict.count(s.substr(j, i - j))) &#123;</span><br><span class="line">                        spaceIdx[i].push_back(j);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> backTrack(s, spaceIdx, s.size());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; backTrack(<span class="built_in">string</span>&amp; s, <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt;&amp; spaceIdx, <span class="keyword">int</span> idx) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; res;</span><br><span class="line">        <span class="keyword">if</span> (idx &lt;= <span class="number">0</span>) &#123;res.push_back(<span class="string">""</span>); <span class="keyword">return</span> res;&#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; spaceIdx[idx].size(); i++) &#123;</span><br><span class="line">            <span class="built_in">string</span> str = s.substr(spaceIdx[idx][i], idx - spaceIdx[idx][i]);</span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; subRes = backTrack(s, spaceIdx, spaceIdx[idx][i]);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; subRes.size(); j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (subRes[j] != <span class="string">""</span>) subRes[j] = subRes[j] + <span class="string">" "</span> + str;</span><br><span class="line">                <span class="keyword">else</span> subRes[j] = str;</span><br><span class="line">                res.push_back(subRes[j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <p><code>简写t</code></p>
+<ul>
+<li>简写替换:如果db=test, collection=profile, 可以简写t=db.profile, 以后t就可以代替db.profile了</li>
+<li><p>mongoimport</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; mongoimport <span class="operator">-d</span> DBName -c CollectionName FileName</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>bool 不用加引号(EX: {“registered”:false})</p>
+</li>
+</ul>
+<h1 id="Insert">Insert</h1><p>db.<collection>.insert(&lt;&gt;)</collection></p>
+<h1 id="Full_update">Full update</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="tag">&lt;<span class="title">collection</span>&gt;</span>.update(<span class="tag">&lt;<span class="title">where</span>&gt;</span>,<span class="tag">&lt;<span class="title">full</span> <span class="attribute">or</span> <span class="attribute">patial</span> <span class="attribute">update</span> <span class="attribute">expression</span>&gt;</span>[,<span class="tag">&lt;<span class="title">upsert</span>&gt;</span>,<span class="tag">&lt;<span class="title">multi</span>&gt;</span>])</span><br></pre></td></tr></table></figure>
+<h2 id="mongo_shell_update_use_javascript">mongo shell update use javascript</h2><p>myobj=t.findOne() <code>存现有值到一个myobj变量里, 注意一定要用findOne()</code></p>
+<ul>
+<li>t.update({_id : myobj._id}, myobj)</li>
+<li>t.save(myobj)</li>
+</ul>
+<h1 id="Patial_update（BSON_Size_limit_16MB/Doc）">Patial update（BSON Size limit 16MB/Doc）</h1><p>$set —db.collection.update({WHERE},{$set:{“NEWINSERT”:”NEWVALUE}})<br>mydoc={‘$set’:{‘INSERT’:100}}<br>t.update({_id:myobj._id},mydoc)</p>
+<p>$push —db.collection.update({WHERE},{$push:{“ARRAY_NAME”:”ARRAY_VALUE}})<br>push to an array if not(Last position), create one<br>$addToSet —insert if not present</p>
+<h1 id="删除">删除</h1><h2 id="$Remove/Delete_—db-remove()—_={…}">$Remove/Delete —db.<collectionname>.remove(<where(multi)>)— <where(multi)>={…}</where(multi)></where(multi)></collectionname></h2><p>db.collection.remove({}) —remove all</p>
+<h1 id="multi_update_default_is_false">multi update default is false</h1><p>db.<collection>.update(<where>,<full or="" patial="" update="" expression="">,<multi>) —<multi>default false</multi></multi></full></where></collection></p>
+<h1 id="upsert">upsert</h1><p>db.<collection>.update(<where>,<full or="" patial="" update="" expression="">,<upsert>)</upsert></full></where></collection></p>
+<h1 id="Command-">Command.</h1><p>BSON wire protocal<br>Query, Insert, Update, Remove, GetMore<br>getLastError,isMaster,drop, create compact—db.runCommand({})<br>ensureIndex, dropIndex, currentOp, killOp —help, db.help()</p>
+<ul>
+<li>db.serverStatus()</li>
+<li>db.cuurentOp()<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">db</span><span class="class">.currentOp</span>()</span><br><span class="line">(New Window)<span class="tag">mongo</span> <span class="tag">localhost</span>/<span class="tag">test</span></span><br><span class="line">(New Window)<span class="tag">while</span>(<span class="number">1</span>)&#123;<span class="tag">db</span><span class="class">.teest3</span><span class="class">.insert</span>(&#123;<span class="attribute">ts</span>:new <span class="function">Date</span>()&#125;); <span class="tag">sleep</span>(<span class="number">5</span>);&#125;</span><br><span class="line"><span class="tag">db</span><span class="class">.currentOp</span>()就有东西了</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>[Q]If you’re looking for problems with database performance, what is a good place to look, when you run db.currentOp()?<br>[A]“secs_running”: (look for long times)</p>
+<ul>
+<li><p>collection.stats()</p>
+</li>
+<li><p>collection.drop() 把所有东西drop掉— db.collection.remove({ })</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	Server:[isMaster, serverStatus, logout]</span><br><span class="line"> 	db:[dropDatabase, repairDatabase, clone, copydb, dbStats]</span><br><span class="line"> 	collection:&#123;dba:[create(<span class="type">implicit</span>), drop, collStats, renameCollection], </span><br><span class="line"> 				user:[<span class="built_in">count</span>,aggregate, mapReduce, FindAndModify, geo]&#125;</span><br><span class="line"> 	<span class="built_in">index</span>:[ensureIndex, dropIndex]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="Bulk_operations_and_methods">Bulk operations and methods</h1><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">var</span> <span class="keyword">bulk= </span>db.<span class="keyword">items.initializeUnorderedBulkOp();</span><br><span class="line"></span><span class="keyword">bulk.insert(&#123;BULABULABULA&#125;)</span><br><span class="line"></span><span class="label">...</span></span><br><span class="line"><span class="keyword">bulk.execute()</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var b= db.items.initializeOrderedBulkOp<span class="params">()</span>;</span><br><span class="line">b.find<span class="params">(&#123;item:<span class="string">"abc123"</span>&#125;)</span>.remove<span class="params">()</span></span><br><span class="line">b.find<span class="params">(&#123;item:<span class="string">"abc123"</span>&#125;)</span>.update<span class="params">(&#123;$inc:&#123;points:<span class="number">1</span>&#125;&#125;)</span></span><br><span class="line">...</span><br><span class="line">bulk.execute<span class="params">()</span></span><br></pre></td></tr></table></figure>
+<p>//————-Quiz Note—————<br>In the shell, add that this user likes “football”. You should not need to pass “tennis” or “golf” to the update query at all.<br>db.users.update({},{$addToSet:{likes:”football”}},true,true)</p>
+<ul>
+<li><p>HW2—<br>b = db.products_bak; db.products.find().forEach( function(o){ b.insert(o) } )<br>// check it worked:<br>b.count()<br>// should print 11<br>homework.a()</p>
+</li>
+<li><blockquote>
+<p>db.products.find({_id:ObjectId(“507d95d5719dbef170f15c00”)})<br>db.products.update({_id:ObjectId(“507d95d5719dbef170f15c00”)},{$inc:{term_years:1}})<br>db.products.update({_id:ObjectId(“507d95d5719dbef170f15c00”)},{$inc:{“limits.sms.over_rate”:0.01}})</p>
+</blockquote>
+</li>
+<li><p>How many products have a voice limit? (That is, have a voice field present in the limits subdocument.)<br>db.products.find({“limits.voice”:{$exists:true}}).count()</p>
+</li>
+</ul>
 
       
     </div>
 
     <div class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/笔记Notes/"> #笔记Notes </a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/28/SearchinRotatedSortedArray/">Search in Rotated Sorted Array</a>
+              <a href="/2022/04/20/ANotes/">Notes</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/22/心灵鸡汤都是假的/">心灵鸡汤都是假的</a>
+              <a href="/2015/10/17/CSRG_Token/">CSRG_Token</a>
             
           </div>
         </div>
@@ -303,7 +365,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Insert"><span class="nav-number">1.</span> <span class="nav-text">Insert</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Full_update"><span class="nav-number">2.</span> <span class="nav-text">Full update</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mongo_shell_update_use_javascript"><span class="nav-number">2.1.</span> <span class="nav-text">mongo shell update use javascript</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Patial_update（BSON_Size_limit_16MB/Doc）"><span class="nav-number">3.</span> <span class="nav-text">Patial update（BSON Size limit 16MB/Doc）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除"><span class="nav-number">4.</span> <span class="nav-text">删除</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#$Remove/Delete_—db-remove()—_={…}"><span class="nav-number">4.1.</span> <span class="nav-text">$Remove/Delete —db..remove()— ={…}</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#multi_update_default_is_false"><span class="nav-number">5.</span> <span class="nav-text">multi update default is false</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#upsert"><span class="nav-number">6.</span> <span class="nav-text">upsert</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Command-"><span class="nav-number">7.</span> <span class="nav-text">Command.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bulk_operations_and_methods"><span class="nav-number">8.</span> <span class="nav-text">Bulk operations and methods</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -532,9 +594,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'jssublog';
-      var disqus_identifier = '2015/06/24/wordbreak/';
-      var disqus_title = 'wordbreak';
-      var disqus_url = 'http://jssu.github.io/2015/06/24/wordbreak/';
+      var disqus_identifier = '2015/10/24/mongo/';
+      var disqus_title = 'MongoDB';
+      var disqus_url = 'http://jssu.github.io/2015/10/24/mongo/';
 
       (function(){
         var dsq = document.createElement('script');

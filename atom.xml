@@ -5,7 +5,7 @@
   <subtitle><![CDATA[宁静致远]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jssu.github.io//"/>
-  <updated>2015-10-21T01:33:13.000Z</updated>
+  <updated>2015-10-24T20:03:22.000Z</updated>
   <id>http://jssu.github.io//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://jssu.github.io/2022/04/20/ANotes/"/>
     <id>http://jssu.github.io/2022/04/20/ANotes/</id>
     <published>2022-04-21T02:22:22.000Z</published>
-    <updated>2015-10-21T01:33:13.000Z</updated>
+    <updated>2015-10-24T20:03:22.000Z</updated>
     <content type="html"><![CDATA[<h1 id="JavaScript">JavaScript</h1><a id="more"></a>
 <h2 id="面试遇到">面试遇到</h2><blockquote>
 <p>Function return function, Implement say(‘say’)(‘hello’)-&gt;out put “sayhello”</p>
@@ -49,20 +49,89 @@
 <p>Or<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">	t=Template(<span class="string">'&lt;h1&gt;hello&#123;&#123;uname&#125;&#125;&lt;/h1&gt;'</span>)</span><br><span class="line">	c=Context(&#123;<span class="string">'uname'</span>:<span class="string">"fred"</span>&#125;)</span><br><span class="line">	<span class="keyword">return</span> HttpResponse(t.render(c))</span><br></pre></td></tr></table></figure></p>
 <p>Or<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> render_to_response(<span class="string">'index.html'</span>,&#123;<span class="string">'uname'</span>:<span class="string">'Fred'</span>&#125;)</span><br></pre></td></tr></table></figure></p>
 <p>Or<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def index(request):</span><br><span class="line">	context=local()</span><br><span class="line">	<span class="keyword">template</span> = 'index.html'</span><br><span class="line">	<span class="keyword">return</span> render(request, <span class="keyword">template</span>, context)</span><br></pre></td></tr></table></figure></p>
-<h2 id="Connect_to_MongoDB">Connect to MongoDB</h2><p>source from <a href="https://django-mongodb-engine.readthedocs.org/en/latest/topics/setup.html" target="_blank" rel="external">https://django-mongodb-engine.readthedocs.org/en/latest/topics/setup.html</a><br>Installation<br>Django MongoDB Engine depends on</p>
-<p>Django-nonrel, a fork of Django that adds support for non-relational databases<br>djangotoolbox, a bunch of utilities for non-relational Django applications and backends<br>It’s highly recommended (although not required) to use a virtualenv for your project to not mess up other Django setups.</p>
-<p>virtualenv<br>If not already installed, grab a copy from the Cheeseshop:</p>
+<h2 id="Connect_to_MongoDB">Connect to MongoDB</h2><p>Source from<br><code>https://django-mongodb-engine.readthedocs.org/en/latest/topics/setup.html</code><br>Installation<br>Django MongoDB Engine depends on</p>
+<p><code>Django-nonrel</code>, a fork of Django that adds support for non-relational databases<br>djangotoolbox, a bunch of utilities for non-relational Django applications and backends<br>It’s highly recommended (although not required) to use a virtualenv for your project to not mess up other Django setups.</p>
+<p><code>virtualenv</code><br>If not already installed, grab a copy from the Cheeseshop:</p>
 <p>pip install virtualenv<br>To set up a virtual environment for your project, use</p>
 <p>virtualenv myproject<br>To join the environment, use (in Bash):</p>
 <p>source myproject/bin/activate<br>Django-nonrel<br>pip install git+<a href="https://github.com/django-nonrel/django@nonrel-1.5" target="_blank" rel="external">https://github.com/django-nonrel/django@nonrel-1.5</a><br>djangotoolbox<br>pip install git+<a href="https://github.com/django-nonrel/djangotoolbox" target="_blank" rel="external">https://github.com/django-nonrel/djangotoolbox</a><br>Django MongoDB Engine<br>You should use the latest Git revision.</p>
-<p>pip install git+<a href="https://github.com/django-nonrel/mongodb-engine" target="_blank" rel="external">https://github.com/django-nonrel/mongodb-engine</a><br>Configuration<br>Database setup is easy (see also the Django database setup docs):</p>
-<p>DATABASES = {<br>   ‘default’ : {<br>      ‘ENGINE’ : ‘django_mongodb_engine’,<br>      ‘NAME’ : ‘my_database’<br>   }<br>}<br>Django MongoDB Engine also takes into account the HOST, PORT, USER, PASSWORD and OPTIONS settings.</p>
+<p>pip install git+<a href="https://github.com/django-nonrel/mongodb-engine" target="_blank" rel="external">https://github.com/django-nonrel/mongodb-engine</a><br>Configuration<br>Database setup is easy (see also the Django database setup docs):<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">   <span class="string">'default'</span> : &#123;</span><br><span class="line">      <span class="string">'ENGINE'</span> : <span class="string">'django_mongodb_engine'</span>,</span><br><span class="line">      <span class="string">'NAME'</span> : <span class="string">'my_database'</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Django MongoDB Engine also takes into account the HOST, PORT, USER, PASSWORD and OPTIONS settings.</p>
 <p>Possible values of OPTIONS are described in the settings reference.</p>
 <p>Done!<br>That’s it! You can now go straight ahead developing your Django application as you would do with any other database.</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h1 id="JavaScript">JavaScript</h1>]]>
     
+    </summary>
+    
+      <category term="笔记Notes" scheme="http://jssu.github.io/tags/%E7%AC%94%E8%AE%B0Notes/"/>
+    
+      <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[MongoDB]]></title>
+    <link href="http://jssu.github.io/2015/10/24/mongo/"/>
+    <id>http://jssu.github.io/2015/10/24/mongo/</id>
+    <published>2015-10-25T02:22:22.000Z</published>
+    <updated>2015-10-24T20:05:03.000Z</updated>
+    <content type="html"><![CDATA[<p><code>简写t</code></p>
+<ul>
+<li>简写替换:如果db=test, collection=profile, 可以简写t=db.profile, 以后t就可以代替db.profile了</li>
+<li><p>mongoimport</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; mongoimport <span class="operator">-d</span> DBName -c CollectionName FileName</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>bool 不用加引号(EX: {“registered”:false})</p>
+</li>
+</ul>
+<h1 id="Insert">Insert</h1><p>db.<collection>.insert(&lt;&gt;)</collection></p>
+<h1 id="Full_update">Full update</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="tag">&lt;<span class="title">collection</span>&gt;</span>.update(<span class="tag">&lt;<span class="title">where</span>&gt;</span>,<span class="tag">&lt;<span class="title">full</span> <span class="attribute">or</span> <span class="attribute">patial</span> <span class="attribute">update</span> <span class="attribute">expression</span>&gt;</span>[,<span class="tag">&lt;<span class="title">upsert</span>&gt;</span>,<span class="tag">&lt;<span class="title">multi</span>&gt;</span>])</span><br></pre></td></tr></table></figure>
+<h2 id="mongo_shell_update_use_javascript">mongo shell update use javascript</h2><p>myobj=t.findOne() <code>存现有值到一个myobj变量里, 注意一定要用findOne()</code></p>
+<ul>
+<li>t.update({_id : myobj._id}, myobj)</li>
+<li>t.save(myobj)</li>
+</ul>
+<h1 id="Patial_update（BSON_Size_limit_16MB/Doc）">Patial update（BSON Size limit 16MB/Doc）</h1><p>$set —db.collection.update({WHERE},{$set:{“NEWINSERT”:”NEWVALUE}})<br>mydoc={‘$set’:{‘INSERT’:100}}<br>t.update({_id:myobj._id},mydoc)</p>
+<p>$push —db.collection.update({WHERE},{$push:{“ARRAY_NAME”:”ARRAY_VALUE}})<br>push to an array if not(Last position), create one<br>$addToSet —insert if not present</p>
+<h1 id="删除">删除</h1><h2 id="$Remove/Delete_—db-remove()—_={…}">$Remove/Delete —db.<collectionname>.remove(<where(multi)>)— <where(multi)>={…}</where(multi)></where(multi)></collectionname></h2><p>db.collection.remove({}) —remove all</p>
+<h1 id="multi_update_default_is_false">multi update default is false</h1><p>db.<collection>.update(<where>,<full or="" patial="" update="" expression="">,<multi>) —<multi>default false</multi></multi></full></where></collection></p>
+<h1 id="upsert">upsert</h1><p>db.<collection>.update(<where>,<full or="" patial="" update="" expression="">,<upsert>)</upsert></full></where></collection></p>
+<h1 id="Command-">Command.</h1><p>BSON wire protocal<br>Query, Insert, Update, Remove, GetMore<br>getLastError,isMaster,drop, create compact—db.runCommand({})<br>ensureIndex, dropIndex, currentOp, killOp —help, db.help()</p>
+<ul>
+<li>db.serverStatus()</li>
+<li>db.cuurentOp()<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">db</span><span class="class">.currentOp</span>()</span><br><span class="line">(New Window)<span class="tag">mongo</span> <span class="tag">localhost</span>/<span class="tag">test</span></span><br><span class="line">(New Window)<span class="tag">while</span>(<span class="number">1</span>)&#123;<span class="tag">db</span><span class="class">.teest3</span><span class="class">.insert</span>(&#123;<span class="attribute">ts</span>:new <span class="function">Date</span>()&#125;); <span class="tag">sleep</span>(<span class="number">5</span>);&#125;</span><br><span class="line"><span class="tag">db</span><span class="class">.currentOp</span>()就有东西了</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>[Q]If you’re looking for problems with database performance, what is a good place to look, when you run db.currentOp()?<br>[A]“secs_running”: (look for long times)</p>
+<ul>
+<li><p>collection.stats()</p>
+</li>
+<li><p>collection.drop() 把所有东西drop掉— db.collection.remove({ })</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	Server:[isMaster, serverStatus, logout]</span><br><span class="line"> 	db:[dropDatabase, repairDatabase, clone, copydb, dbStats]</span><br><span class="line"> 	collection:&#123;dba:[create(<span class="type">implicit</span>), drop, collStats, renameCollection], </span><br><span class="line"> 				user:[<span class="built_in">count</span>,aggregate, mapReduce, FindAndModify, geo]&#125;</span><br><span class="line"> 	<span class="built_in">index</span>:[ensureIndex, dropIndex]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="Bulk_operations_and_methods">Bulk operations and methods</h1><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">var</span> <span class="keyword">bulk= </span>db.<span class="keyword">items.initializeUnorderedBulkOp();</span><br><span class="line"></span><span class="keyword">bulk.insert(&#123;BULABULABULA&#125;)</span><br><span class="line"></span><span class="label">...</span></span><br><span class="line"><span class="keyword">bulk.execute()</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var b= db.items.initializeOrderedBulkOp<span class="params">()</span>;</span><br><span class="line">b.find<span class="params">(&#123;item:<span class="string">"abc123"</span>&#125;)</span>.remove<span class="params">()</span></span><br><span class="line">b.find<span class="params">(&#123;item:<span class="string">"abc123"</span>&#125;)</span>.update<span class="params">(&#123;$inc:&#123;points:<span class="number">1</span>&#125;&#125;)</span></span><br><span class="line">...</span><br><span class="line">bulk.execute<span class="params">()</span></span><br></pre></td></tr></table></figure>
+<p>//————-Quiz Note—————<br>In the shell, add that this user likes “football”. You should not need to pass “tennis” or “golf” to the update query at all.<br>db.users.update({},{$addToSet:{likes:”football”}},true,true)</p>
+<ul>
+<li><p>HW2—<br>b = db.products_bak; db.products.find().forEach( function(o){ b.insert(o) } )<br>// check it worked:<br>b.count()<br>// should print 11<br>homework.a()</p>
+</li>
+<li><blockquote>
+<p>db.products.find({_id:ObjectId(“507d95d5719dbef170f15c00”)})<br>db.products.update({_id:ObjectId(“507d95d5719dbef170f15c00”)},{$inc:{term_years:1}})<br>db.products.update({_id:ObjectId(“507d95d5719dbef170f15c00”)},{$inc:{“limits.sms.over_rate”:0.01}})</p>
+</blockquote>
+</li>
+<li><p>How many products have a voice limit? (That is, have a voice field present in the limits subdocument.)<br>db.products.find({“limits.voice”:{$exists:true}}).count()</p>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><code>简写t</code></p>
+<ul>
+<li>简写替换:如果db=test, collection=profile, 可以简写t=db.profile, 以后t就可以代替db.profile了</li>
+<li><p>mongoimport</p>
+<figu]]>
     </summary>
     
       <category term="笔记Notes" scheme="http://jssu.github.io/tags/%E7%AC%94%E8%AE%B0Notes/"/>
@@ -903,24 +972,6 @@
       <category term="照片" scheme="http://jssu.github.io/tags/%E7%85%A7%E7%89%87/"/>
     
       <category term="生活" scheme="http://jssu.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Terminal]]></title>
-    <link href="http://jssu.github.io/2015/06/07/Terminal/"/>
-    <id>http://jssu.github.io/2015/06/07/Terminal/</id>
-    <published>2015-06-07T23:12:01.000Z</published>
-    <updated>2015-06-07T23:13:38.000Z</updated>
-    <content type="html"><![CDATA[<p>在bin中创建sublime：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s <span class="regexp">/Applications/</span>Sublime\ Text.app<span class="regexp">/Contents/</span>SharedSupport<span class="regexp">/bin/</span>subl <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>sublime</span><br></pre></td></tr></table></figure></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>在bin中创建sublime：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td clas]]>
-    </summary>
-    
-      <category term="Mac" scheme="http://jssu.github.io/tags/Mac/"/>
-    
-      <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
