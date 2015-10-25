@@ -280,46 +280,17 @@
 <li><p>bool 不用加引号(EX: {“registered”:false})</p>
 </li>
 </ul>
-<h1 id="Insert">Insert</h1><p>db.<collection>.insert(&lt;&gt;)</collection></p>
+<h1 id="Insert">Insert</h1><p>db.<collection>.insert(&lt;&gt;)</p>
 <h1 id="Full_update">Full update</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="tag">&lt;<span class="title">collection</span>&gt;</span>.update(<span class="tag">&lt;<span class="title">where</span>&gt;</span>,<span class="tag">&lt;<span class="title">full</span> <span class="attribute">or</span> <span class="attribute">patial</span> <span class="attribute">update</span> <span class="attribute">expression</span>&gt;</span>[,<span class="tag">&lt;<span class="title">upsert</span>&gt;</span>,<span class="tag">&lt;<span class="title">multi</span>&gt;</span>])</span><br></pre></td></tr></table></figure>
 <h2 id="mongo_shell_update_use_javascript">mongo shell update use javascript</h2><p>myobj=t.findOne() <code>存现有值到一个myobj变量里, 注意一定要用findOne()</code></p>
 <ul>
 <li>t.update({_id : myobj._id}, myobj)</li>
-<li>t.save(myobj)</li>
-</ul>
-<h1 id="Patial_update（BSON_Size_limit_16MB/Doc）">Patial update（BSON Size limit 16MB/Doc）</h1><p>$set —db.collection.update({WHERE},{$set:{“NEWINSERT”:”NEWVALUE}})<br>mydoc={‘$set’:{‘INSERT’:100}}<br>t.update({_id:myobj._id},mydoc)</p>
-<p>$push —db.collection.update({WHERE},{$push:{“ARRAY_NAME”:”ARRAY_VALUE}})<br>push to an array if not(Last position), create one<br>$addToSet —insert if not present</p>
-<h1 id="删除">删除</h1><h2 id="$Remove/Delete_—db-remove()—_={…}">$Remove/Delete —db.<collectionname>.remove(<where(multi)>)— <where(multi)>={…}</where(multi)></where(multi)></collectionname></h2><p>db.collection.remove({}) —remove all</p>
-<h1 id="multi_update_default_is_false">multi update default is false</h1><p>db.<collection>.update(<where>,<full or="" patial="" update="" expression="">,<multi>) —<multi>default false</multi></multi></full></where></collection></p>
-<h1 id="upsert">upsert</h1><p>db.<collection>.update(<where>,<full or="" patial="" update="" expression="">,<upsert>)</upsert></full></where></collection></p>
-<h1 id="Command-">Command.</h1><p>BSON wire protocal<br>Query, Insert, Update, Remove, GetMore<br>getLastError,isMaster,drop, create compact—db.runCommand({})<br>ensureIndex, dropIndex, currentOp, killOp —help, db.help()</p>
-<ul>
-<li>db.serverStatus()</li>
-<li>db.cuurentOp()<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">db</span><span class="class">.currentOp</span>()</span><br><span class="line">(New Window)<span class="tag">mongo</span> <span class="tag">localhost</span>/<span class="tag">test</span></span><br><span class="line">(New Window)<span class="tag">while</span>(<span class="number">1</span>)&#123;<span class="tag">db</span><span class="class">.teest3</span><span class="class">.insert</span>(&#123;<span class="attribute">ts</span>:new <span class="function">Date</span>()&#125;); <span class="tag">sleep</span>(<span class="number">5</span>);&#125;</span><br><span class="line"><span class="tag">db</span><span class="class">.currentOp</span>()就有东西了</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>[Q]If you’re looking for problems with database performance, what is a good place to look, when you run db.currentOp()?<br>[A]“secs_running”: (look for long times)</p>
-<ul>
-<li><p>collection.stats()</p>
-</li>
-<li><p>collection.drop() 把所有东西drop掉— db.collection.remove({ })</p>
-<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	Server:[isMaster, serverStatus, logout]</span><br><span class="line"> 	db:[dropDatabase, repairDatabase, clone, copydb, dbStats]</span><br><span class="line"> 	collection:&#123;dba:[create(<span class="type">implicit</span>), drop, collStats, renameCollection], </span><br><span class="line"> 				user:[<span class="built_in">count</span>,aggregate, mapReduce, FindAndModify, geo]&#125;</span><br><span class="line"> 	<span class="built_in">index</span>:[ensureIndex, dropIndex]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="Bulk_operations_and_methods">Bulk operations and methods</h1><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">var</span> <span class="keyword">bulk= </span>db.<span class="keyword">items.initializeUnorderedBulkOp();</span><br><span class="line"></span><span class="keyword">bulk.insert(&#123;BULABULABULA&#125;)</span><br><span class="line"></span><span class="label">...</span></span><br><span class="line"><span class="keyword">bulk.execute()</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var b= db.items.initializeOrderedBulkOp<span class="params">()</span>;</span><br><span class="line">b.find<span class="params">(&#123;item:<span class="string">"abc123"</span>&#125;)</span>.remove<span class="params">()</span></span><br><span class="line">b.find<span class="params">(&#123;item:<span class="string">"abc123"</span>&#125;)</span>.update<span class="params">(&#123;$inc:&#123;points:<span class="number">1</span>&#125;&#125;)</span></span><br><span class="line">...</span><br><span class="line">bulk.execute<span class="params">()</span></span><br></pre></td></tr></table></figure>
-<p>//————-Quiz Note—————<br>In the shell, add that this user likes “football”. You should not need to pass “tennis” or “golf” to the update query at all.<br>db.users.update({},{$addToSet:{likes:”football”}},true,true)</p>
-<ul>
-<li><p>HW2—<br>b = db.products_bak; db.products.find().forEach( function(o){ b.insert(o) } )<br>// check it worked:<br>b.count()<br>// should print 11<br>homework.a()</p>
-</li>
-<li><blockquote>
-<p>db.products.find({_id:ObjectId(“507d95d5719dbef170f15c00”)})<br>db.products.update({_id:ObjectId(“507d95d5719dbef170f15c00”)},{$inc:{term_years:1}})<br>db.products.update({_id:ObjectId(“507d95d5719dbef170f15c00”)},{$inc:{“limits.sms.over_rate”:0.01}})</p>
-</blockquote>
-</li>
-<li><p>How many products have a voice limit? (That is, have a voice field present in the limits subdocument.)<br>db.products.find({“limits.voice”:{$exists:true}}).count()</p>
-</li>
-</ul>
-
+<li>t.save(myobj)
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/10/24/mongo/#more">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>

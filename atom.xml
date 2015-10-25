@@ -76,7 +76,7 @@
     <link href="http://jssu.github.io/2015/10/24/mongo/"/>
     <id>http://jssu.github.io/2015/10/24/mongo/</id>
     <published>2015-10-25T02:22:22.000Z</published>
-    <updated>2015-10-24T20:05:03.000Z</updated>
+    <updated>2015-10-25T05:17:55.000Z</updated>
     <content type="html"><![CDATA[<p><code>简写t</code></p>
 <ul>
 <li>简写替换:如果db=test, collection=profile, 可以简写t=db.profile, 以后t就可以代替db.profile了</li>
@@ -91,9 +91,9 @@
 <h2 id="mongo_shell_update_use_javascript">mongo shell update use javascript</h2><p>myobj=t.findOne() <code>存现有值到一个myobj变量里, 注意一定要用findOne()</code></p>
 <ul>
 <li>t.update({_id : myobj._id}, myobj)</li>
-<li>t.save(myobj)</li>
+<li>t.save(myobj)<a id="more"></a>
+<h1 id="Patial_update（BSON_Size_limit_16MB/Doc）">Patial update（BSON Size limit 16MB/Doc）</h1>$set —db.collection.update({WHERE},{$set:{“NEWINSERT”:”NEWVALUE}})<br>mydoc={‘$set’:{‘INSERT’:100}}<br>t.update({_id:myobj._id},mydoc)</li>
 </ul>
-<h1 id="Patial_update（BSON_Size_limit_16MB/Doc）">Patial update（BSON Size limit 16MB/Doc）</h1><p>$set —db.collection.update({WHERE},{$set:{“NEWINSERT”:”NEWVALUE}})<br>mydoc={‘$set’:{‘INSERT’:100}}<br>t.update({_id:myobj._id},mydoc)</p>
 <p>$push —db.collection.update({WHERE},{$push:{“ARRAY_NAME”:”ARRAY_VALUE}})<br>push to an array if not(Last position), create one<br>$addToSet —insert if not present</p>
 <h1 id="删除">删除</h1><h2 id="$Remove/Delete_—db-remove()—_={…}">$Remove/Delete —db.<collectionname>.remove(<where(multi)>)— <where(multi)>={…}</where(multi)></where(multi)></collectionname></h2><p>db.collection.remove({}) —remove all</p>
 <h1 id="multi_update_default_is_false">multi update default is false</h1><p>db.<collection>.update(<where>,<full or="" patial="" update="" expression="">,<multi>) —<multi>default false</multi></multi></full></where></collection></p>
@@ -131,7 +131,18 @@
 <ul>
 <li>简写替换:如果db=test, collection=profile, 可以简写t=db.profile, 以后t就可以代替db.profile了</li>
 <li><p>mongoimport</p>
-<figu]]>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; mongoimport <span class="operator">-d</span> DBName -c CollectionName FileName</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>bool 不用加引号(EX: {“registered”:false})</p>
+</li>
+</ul>
+<h1 id="Insert">Insert</h1><p>db.<collection>.insert(&lt;&gt;)</p>
+<h1 id="Full_update">Full update</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.<span class="tag">&lt;<span class="title">collection</span>&gt;</span>.update(<span class="tag">&lt;<span class="title">where</span>&gt;</span>,<span class="tag">&lt;<span class="title">full</span> <span class="attribute">or</span> <span class="attribute">patial</span> <span class="attribute">update</span> <span class="attribute">expression</span>&gt;</span>[,<span class="tag">&lt;<span class="title">upsert</span>&gt;</span>,<span class="tag">&lt;<span class="title">multi</span>&gt;</span>])</span><br></pre></td></tr></table></figure>
+<h2 id="mongo_shell_update_use_javascript">mongo shell update use javascript</h2><p>myobj=t.findOne() <code>存现有值到一个myobj变量里, 注意一定要用findOne()</code></p>
+<ul>
+<li>t.update({_id : myobj._id}, myobj)</li>
+<li>t.save(myobj)]]>
+    
     </summary>
     
       <category term="笔记Notes" scheme="http://jssu.github.io/tags/%E7%AC%94%E8%AE%B0Notes/"/>
