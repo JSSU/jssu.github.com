@@ -76,7 +76,7 @@
     <link href="http://jssu.github.io/2015/10/24/mongo/"/>
     <id>http://jssu.github.io/2015/10/24/mongo/</id>
     <published>2015-10-25T02:22:22.000Z</published>
-    <updated>2015-10-25T05:17:55.000Z</updated>
+    <updated>2015-10-28T00:42:44.000Z</updated>
     <content type="html"><![CDATA[<p><code>简写t</code></p>
 <ul>
 <li>简写替换:如果db=test, collection=profile, 可以简写t=db.profile, 以后t就可以代替db.profile了</li>
@@ -101,7 +101,7 @@
 <h1 id="Command-">Command.</h1><p>BSON wire protocal<br>Query, Insert, Update, Remove, GetMore<br>getLastError,isMaster,drop, create compact—db.runCommand({})<br>ensureIndex, dropIndex, currentOp, killOp —help, db.help()</p>
 <ul>
 <li>db.serverStatus()</li>
-<li>db.cuurentOp()<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">db</span><span class="class">.currentOp</span>()</span><br><span class="line">(New Window)<span class="tag">mongo</span> <span class="tag">localhost</span>/<span class="tag">test</span></span><br><span class="line">(New Window)<span class="tag">while</span>(<span class="number">1</span>)&#123;<span class="tag">db</span><span class="class">.teest3</span><span class="class">.insert</span>(&#123;<span class="attribute">ts</span>:new <span class="function">Date</span>()&#125;); <span class="tag">sleep</span>(<span class="number">5</span>);&#125;</span><br><span class="line"><span class="tag">db</span><span class="class">.currentOp</span>()就有东西了</span><br></pre></td></tr></table></figure>
+<li>db.cuurentOp()<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">db</span><span class="class">.currentOp</span>()</span><br><span class="line">(New Window)<span class="tag">mongo</span> <span class="tag">localhost</span>/<span class="tag">test</span></span><br><span class="line">(New Window)<span class="tag">while</span>(<span class="number">1</span>)&#123;<span class="tag">db</span><span class="class">.teest3</span><span class="class">.insert</span>(&#123;<span class="attribute">ts</span>:new <span class="function">Date</span>()&#125;); <span class="tag">sleep</span>(<span class="number">5</span>);&#125;</span><br><span class="line"><span class="tag">db</span><span class="class">.currentOp</span>()就有东西了</span><br><span class="line"><span class="tag">killOp</span>()</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>[Q]If you’re looking for problems with database performance, what is a good place to look, when you run db.currentOp()?<br>[A]“secs_running”: (look for long times)</p>
