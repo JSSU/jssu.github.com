@@ -226,7 +226,7 @@
           
             
               <a class="post-title-link" href="/2015/11/07/amazon/">
-                论底层青年如何逆袭到中上阶层
+                Amazon
               </a>
             
           
@@ -271,7 +271,9 @@
 
       
         
-          <h1 id="Asked_to_find_sub-strings_from_a_string_which_are_valid_dictionary_words-">Asked to find sub-strings from a string which are valid dictionary words.</h1><h1 id="Two_sentences_and_wanted_me_to_return_a_list_of_words_that_exists_in_one_sentence_but_not_on_the_other_one-_for_example_s1_=_“I_am_happy”_s2_=_“I_am_old”,_you_have_to_return_[“happy”,_“old”]">Two sentences and wanted me to return a list of words that exists in one sentence but not on the other one. for example s1 = “I am happy” s2 = “I am old”, you have to return [“happy”, “old”]</h1><h1 id="the_difference_between_abstract_class_and_interface">the difference between abstract class and interface</h1><h2 id="interface">interface</h2><p>An interface is a contract: the guy writing the interface says, “hey, I accept things looking that way”, and the guy using the interface says “Ok, the class I write looks that way”.</p>
+          <p>Asked to find sub-strings from a string which are valid dictionary words.</p>
+<p>Two sentences and wanted me to return a list of words that exists in one sentence but not on the other one. for example s1 = “I am happy” s2 = “I am old”, you have to return [“happy”, “old”]</p>
+<h1 id="the_difference_between_abstract_class_and_interface">the difference between abstract class and interface</h1><h2 id="interface">interface</h2><p>An interface is a contract: the guy writing the interface says, “hey, I accept things looking that way”, and the guy using the interface says “Ok, the class I write looks that way”.</p>
 <p>An interface is an empty shell, there are only the signatures of the methods, which implies that the methods do not have a body. The interface can’t do anything. It’s just a pattern.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// I say all motor vehicles should look like this:</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getFuel</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// my team mate complies and writes vehicle looking that way</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> <span class="keyword">implements</span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> fuel;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        print(<span class="string">"Wrroooooooom"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getFuel</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.fuel;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>Implementing an interface consumes very little CPU, because it’s not a class, just a bunch of names, and therefore there is no expensive look-up to do. It’s great when it matters such as in embedded devices.</p>
 <h2 id="Abstract_class">Abstract class</h2><p>Abstract classes, unlike interfaces, are classes. They are more expensive to use because there is a look-up to do when you inherit from them.</p>
@@ -1018,7 +1020,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
