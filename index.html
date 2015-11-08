@@ -225,6 +225,91 @@
           
           
             
+              <a class="post-title-link" href="/2015/11/07/amazon/">
+                论底层青年如何逆袭到中上阶层
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-11-07
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/学习/">学习</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/11/07/amazon/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/11/07/amazon/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h1 id="Asked_to_find_sub-strings_from_a_string_which_are_valid_dictionary_words-">Asked to find sub-strings from a string which are valid dictionary words.</h1><h1 id="Two_sentences_and_wanted_me_to_return_a_list_of_words_that_exists_in_one_sentence_but_not_on_the_other_one-_for_example_s1_=_“I_am_happy”_s2_=_“I_am_old”,_you_have_to_return_[“happy”,_“old”]">Two sentences and wanted me to return a list of words that exists in one sentence but not on the other one. for example s1 = “I am happy” s2 = “I am old”, you have to return [“happy”, “old”]</h1><h1 id="the_difference_between_abstract_class_and_interface">the difference between abstract class and interface</h1><h2 id="interface">interface</h2><p>An interface is a contract: the guy writing the interface says, “hey, I accept things looking that way”, and the guy using the interface says “Ok, the class I write looks that way”.</p>
+<p>An interface is an empty shell, there are only the signatures of the methods, which implies that the methods do not have a body. The interface can’t do anything. It’s just a pattern.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// I say all motor vehicles should look like this:</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getFuel</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// my team mate complies and writes vehicle looking that way</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> <span class="keyword">implements</span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> fuel;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        print(<span class="string">"Wrroooooooom"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getFuel</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.fuel;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Implementing an interface consumes very little CPU, because it’s not a class, just a bunch of names, and therefore there is no expensive look-up to do. It’s great when it matters such as in embedded devices.</p>
+<h2 id="Abstract_class">Abstract class</h2><p>Abstract classes, unlike interfaces, are classes. They are more expensive to use because there is a look-up to do when you inherit from them.</p>
+<p>Abstract classes look a lot like interfaces, but they have something more : you can define a behavior for them. It’s more about a guy saying, “these classes should look like that, and they have that in common, so fill in the blanks!”.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// I say all motor vehicles should look like this :</span></span><br><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">    int fuel;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// they ALL have fuel, so why not let others implement this?</span></span><br><span class="line">    <span class="comment">// let's make it for everybody</span></span><br><span class="line">    int getFuel()</span><br><span class="line">    &#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>.fuel;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// that can be very different, force them to provide their</span></span><br><span class="line">    <span class="comment">// implementation</span></span><br><span class="line">    <span class="keyword">abstract</span> void run();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// my team mate complies and writes vehicle looking that way</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    void run()</span><br><span class="line">    &#123;</span><br><span class="line">        print(<span class="string">"Wrroooooooom"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="Implementation">Implementation</h1><p>While abstract classes and interfaces are supposed to be different concepts, the implementations make that statement sometimes untrue. Sometimes, they are not even what you think they are.</p>
+<p>In Java, this rule is strongly enforced, while in PHP, interfaces are abstract classes with no method declared.</p>
+<p>In Python, abstract classes are more a programming trick you can get from the ABC module and is actually using metaclasses, and therefore classes. And interfaces are more related to duck typing in this language and it’s a mix between conventions and special methods that call descriptors (the <strong>method</strong> methods).</p>
+<p>As usual with programming, there is theory, practice, and practice in another language :-)</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2015/10/24/mongo/">
                 MongoDB
               </a>
@@ -881,90 +966,6 @@
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/06/28/SearchinRotatedSortedArray/">
-                Search in Rotated Sorted Array
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2015-06-28
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/学习/">学习</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/06/28/SearchinRotatedSortedArray/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/06/28/SearchinRotatedSortedArray/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>Search in Rotated Sorted Array</p>
-<blockquote>
-<p>Suppose a sorted array is rotated at some pivot unknown to you beforehand.<br>(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).<br>You are given a target value to search. If found in the array return its index, otherwise return -1.<br>You may assume no duplicate exists in the array.</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/06/28/SearchinRotatedSortedArray/#more">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -1003,7 +1004,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

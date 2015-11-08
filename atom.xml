@@ -72,6 +72,32 @@
   </entry>
   
   <entry>
+    <title><![CDATA[论底层青年如何逆袭到中上阶层]]></title>
+    <link href="http://jssu.github.io/2015/11/07/amazon/"/>
+    <id>http://jssu.github.io/2015/11/07/amazon/</id>
+    <published>2015-11-07T23:40:53.000Z</published>
+    <updated>2015-11-07T15:59:42.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="Asked_to_find_sub-strings_from_a_string_which_are_valid_dictionary_words-">Asked to find sub-strings from a string which are valid dictionary words.</h1><h1 id="Two_sentences_and_wanted_me_to_return_a_list_of_words_that_exists_in_one_sentence_but_not_on_the_other_one-_for_example_s1_=_“I_am_happy”_s2_=_“I_am_old”,_you_have_to_return_[“happy”,_“old”]">Two sentences and wanted me to return a list of words that exists in one sentence but not on the other one. for example s1 = “I am happy” s2 = “I am old”, you have to return [“happy”, “old”]</h1><h1 id="the_difference_between_abstract_class_and_interface">the difference between abstract class and interface</h1><h2 id="interface">interface</h2><p>An interface is a contract: the guy writing the interface says, “hey, I accept things looking that way”, and the guy using the interface says “Ok, the class I write looks that way”.</p>
+<p>An interface is an empty shell, there are only the signatures of the methods, which implies that the methods do not have a body. The interface can’t do anything. It’s just a pattern.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// I say all motor vehicles should look like this:</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getFuel</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// my team mate complies and writes vehicle looking that way</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> <span class="keyword">implements</span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> fuel;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        print(<span class="string">"Wrroooooooom"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getFuel</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.fuel;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Implementing an interface consumes very little CPU, because it’s not a class, just a bunch of names, and therefore there is no expensive look-up to do. It’s great when it matters such as in embedded devices.</p>
+<h2 id="Abstract_class">Abstract class</h2><p>Abstract classes, unlike interfaces, are classes. They are more expensive to use because there is a look-up to do when you inherit from them.</p>
+<p>Abstract classes look a lot like interfaces, but they have something more : you can define a behavior for them. It’s more about a guy saying, “these classes should look like that, and they have that in common, so fill in the blanks!”.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// I say all motor vehicles should look like this :</span></span><br><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">    int fuel;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// they ALL have fuel, so why not let others implement this?</span></span><br><span class="line">    <span class="comment">// let's make it for everybody</span></span><br><span class="line">    int getFuel()</span><br><span class="line">    &#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>.fuel;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// that can be very different, force them to provide their</span></span><br><span class="line">    <span class="comment">// implementation</span></span><br><span class="line">    <span class="keyword">abstract</span> void run();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// my team mate complies and writes vehicle looking that way</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    void run()</span><br><span class="line">    &#123;</span><br><span class="line">        print(<span class="string">"Wrroooooooom"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="Implementation">Implementation</h1><p>While abstract classes and interfaces are supposed to be different concepts, the implementations make that statement sometimes untrue. Sometimes, they are not even what you think they are.</p>
+<p>In Java, this rule is strongly enforced, while in PHP, interfaces are abstract classes with no method declared.</p>
+<p>In Python, abstract classes are more a programming trick you can get from the ABC module and is actually using metaclasses, and therefore classes. And interfaces are more related to duck typing in this language and it’s a mix between conventions and special methods that call descriptors (the <strong>method</strong> methods).</p>
+<p>As usual with programming, there is theory, practice, and practice in another language :-)</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Asked_to_find_sub-strings_from_a_string_which_are_valid_dictionary_words-">Asked to find sub-strings from a string which are valid d]]>
+    </summary>
+    
+      <category term="文章" scheme="http://jssu.github.io/tags/%E6%96%87%E7%AB%A0/"/>
+    
+      <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[MongoDB]]></title>
     <link href="http://jssu.github.io/2015/10/24/mongo/"/>
     <id>http://jssu.github.io/2015/10/24/mongo/</id>
@@ -965,24 +991,6 @@
       <category term="VMWare" scheme="http://jssu.github.io/tags/VMWare/"/>
     
       <category term="学习" scheme="http://jssu.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[GF]]></title>
-    <link href="http://jssu.github.io/2015/06/07/gf/"/>
-    <id>http://jssu.github.io/2015/06/07/gf/</id>
-    <published>2015-06-08T03:48:29.000Z</published>
-    <updated>2015-06-08T03:54:37.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="https://scontent-iad3-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/10258515_1492803327606377_4726714035170089888_n.jpg?oh=d7416c39d1d1a7c57f953b42244b52fc&amp;oe=5631187C" alt="百媚生"></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><img src="https://scontent-iad3-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/10258515_1492803327606377_4726714035170089888_n.jpg?oh=d7416c39d1d1a]]>
-    </summary>
-    
-      <category term="照片" scheme="http://jssu.github.io/tags/%E7%85%A7%E7%89%87/"/>
-    
-      <category term="生活" scheme="http://jssu.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   

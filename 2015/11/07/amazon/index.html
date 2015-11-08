@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="文章," />
 
 
 
@@ -47,7 +47,7 @@
 
 
 
-  <title> FB,后面发面经 // JSSU_Shen </title>
+  <title> 论底层青年如何逆袭到中上阶层 // JSSU_Shen </title>
 </head>
 
 <body>
@@ -142,7 +142,7 @@
           
           
             
-              FB,后面发面经
+              论底层青年如何逆袭到中上阶层
             
           
         </h1>
@@ -150,7 +150,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2015-06-20
+          Posted on 2015-11-07
         </span>
 
         
@@ -170,8 +170,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/20/FB应该录了吧/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/06/20/FB应该录了吧/"></span>
+            <a href="/2015/11/07/amazon/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/11/07/amazon/"></span>
             </a>
           </span>
           
@@ -185,25 +185,39 @@
       
 
       
-        <p>我很满意自己的面试。加油！</p>
+        <h1 id="Asked_to_find_sub-strings_from_a_string_which_are_valid_dictionary_words-">Asked to find sub-strings from a string which are valid dictionary words.</h1><h1 id="Two_sentences_and_wanted_me_to_return_a_list_of_words_that_exists_in_one_sentence_but_not_on_the_other_one-_for_example_s1_=_“I_am_happy”_s2_=_“I_am_old”,_you_have_to_return_[“happy”,_“old”]">Two sentences and wanted me to return a list of words that exists in one sentence but not on the other one. for example s1 = “I am happy” s2 = “I am old”, you have to return [“happy”, “old”]</h1><h1 id="the_difference_between_abstract_class_and_interface">the difference between abstract class and interface</h1><h2 id="interface">interface</h2><p>An interface is a contract: the guy writing the interface says, “hey, I accept things looking that way”, and the guy using the interface says “Ok, the class I write looks that way”.</p>
+<p>An interface is an empty shell, there are only the signatures of the methods, which implies that the methods do not have a body. The interface can’t do anything. It’s just a pattern.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// I say all motor vehicles should look like this:</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getFuel</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// my team mate complies and writes vehicle looking that way</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> <span class="keyword">implements</span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> fuel;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        print(<span class="string">"Wrroooooooom"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getFuel</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.fuel;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Implementing an interface consumes very little CPU, because it’s not a class, just a bunch of names, and therefore there is no expensive look-up to do. It’s great when it matters such as in embedded devices.</p>
+<h2 id="Abstract_class">Abstract class</h2><p>Abstract classes, unlike interfaces, are classes. They are more expensive to use because there is a look-up to do when you inherit from them.</p>
+<p>Abstract classes look a lot like interfaces, but they have something more : you can define a behavior for them. It’s more about a guy saying, “these classes should look like that, and they have that in common, so fill in the blanks!”.<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// I say all motor vehicles should look like this :</span></span><br><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">    int fuel;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// they ALL have fuel, so why not let others implement this?</span></span><br><span class="line">    <span class="comment">// let's make it for everybody</span></span><br><span class="line">    int getFuel()</span><br><span class="line">    &#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>.fuel;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// that can be very different, force them to provide their</span></span><br><span class="line">    <span class="comment">// implementation</span></span><br><span class="line">    <span class="keyword">abstract</span> void run();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// my team mate complies and writes vehicle looking that way</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    void run()</span><br><span class="line">    &#123;</span><br><span class="line">        print(<span class="string">"Wrroooooooom"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="Implementation">Implementation</h1><p>While abstract classes and interfaces are supposed to be different concepts, the implementations make that statement sometimes untrue. Sometimes, they are not even what you think they are.</p>
+<p>In Java, this rule is strongly enforced, while in PHP, interfaces are abstract classes with no method declared.</p>
+<p>In Python, abstract classes are more a programming trick you can get from the ABC module and is actually using metaclasses, and therefore classes. And interfaces are more related to duck typing in this language and it’s a mix between conventions and special methods that call descriptors (the <strong>method</strong> methods).</p>
+<p>As usual with programming, there is theory, practice, and practice in another language :-)</p>
 
       
     </div>
 
     <div class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/文章/"> #文章 </a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/22/心灵鸡汤都是假的/">心灵鸡汤都是假的</a>
+              <a href="/2022/04/20/ANotes/">Notes</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/17/FBInterview/">来FB</a>
+              <a href="/2015/10/24/mongo/">MongoDB</a>
             
           </div>
         </div>
@@ -312,7 +326,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Asked_to_find_sub-strings_from_a_string_which_are_valid_dictionary_words-"><span class="nav-number">1.</span> <span class="nav-text">Asked to find sub-strings from a string which are valid dictionary words.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Two_sentences_and_wanted_me_to_return_a_list_of_words_that_exists_in_one_sentence_but_not_on_the_other_one-_for_example_s1_=_“I_am_happy”_s2_=_“I_am_old”,_you_have_to_return_[“happy”,_“old”]"><span class="nav-number">2.</span> <span class="nav-text">Two sentences and wanted me to return a list of words that exists in one sentence but not on the other one. for example s1 = “I am happy” s2 = “I am old”, you have to return [“happy”, “old”]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the_difference_between_abstract_class_and_interface"><span class="nav-number">3.</span> <span class="nav-text">the difference between abstract class and interface</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#interface"><span class="nav-number">3.1.</span> <span class="nav-text">interface</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract_class"><span class="nav-number">3.2.</span> <span class="nav-text">Abstract class</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Implementation"><span class="nav-number">4.</span> <span class="nav-text">Implementation</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -541,9 +555,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'jssublog';
-      var disqus_identifier = '2015/06/20/FB应该录了吧/';
-      var disqus_title = 'FB,后面发面经';
-      var disqus_url = 'http://jssu.github.io/2015/06/20/FB应该录了吧/';
+      var disqus_identifier = '2015/11/07/amazon/';
+      var disqus_title = '论底层青年如何逆袭到中上阶层';
+      var disqus_url = 'http://jssu.github.io/2015/11/07/amazon/';
 
       (function(){
         var dsq = document.createElement('script');
