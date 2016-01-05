@@ -272,11 +272,13 @@
       
         
           <p>先装model：pip install xlwt</p>
-<p>下面是sample code：<br>‘<a href="https://pypi.python.org/pypi/xlwt’" target="_blank" rel="external">https://pypi.python.org/pypi/xlwt’</a><br>‘’‘<br>import xlwt<br>from datetime import datetime</p>
+<p>下面是sample code：<br>‘<a href="https://pypi.python.org/pypi/xlwt" target="_blank" rel="external">https://pypi.python.org/pypi/xlwt</a>‘</p>
+<p>‘’’<br>import xlwt<br>from datetime import datetime</p>
 <p>style0 = xlwt.easyxf(‘font: name Times New Roman, color-index red, bold on’,<br>    num_format_str=’#,##0.00’)<br>style1 = xlwt.easyxf(num_format_str=’D-MMM-YY’)</p>
 <p>wb = xlwt.Workbook()<br>ws = wb.add_sheet(‘A Test Sheet’)</p>
 <p>ws.write(0, 0, 1234.56, style0)<br>ws.write(1, 0, datetime.now(), style1)<br>ws.write(2, 0, 1)<br>ws.write(2, 1, 1)<br>ws.write(2, 2, xlwt.Formula(“A3+B3”))</p>
-<p>wb.save(‘example.xls’)<br>’‘’</p>
+<p>wb.save(‘example.xls’)<br>‘’’</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gd38-X3HpbM" frameborder="0" allowfullscreen></iframe>
 
         
       
