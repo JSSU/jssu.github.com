@@ -225,6 +225,88 @@
           
           
             
+              <a class="post-title-link" href="/2016/01/04/pythonExcel/">
+                Python 输出 Excel
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2016-01-04
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/学习/">学习</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2016/01/04/pythonExcel/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/04/pythonExcel/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>先装model：pip install xlwt</p>
+<p>下面是sample code：<br>‘<a href="https://pypi.python.org/pypi/xlwt’" target="_blank" rel="external">https://pypi.python.org/pypi/xlwt’</a><br>‘’‘<br>import xlwt<br>from datetime import datetime</p>
+<p>style0 = xlwt.easyxf(‘font: name Times New Roman, color-index red, bold on’,<br>    num_format_str=’#,##0.00’)<br>style1 = xlwt.easyxf(num_format_str=’D-MMM-YY’)</p>
+<p>wb = xlwt.Workbook()<br>ws = wb.add_sheet(‘A Test Sheet’)</p>
+<p>ws.write(0, 0, 1234.56, style0)<br>ws.write(1, 0, datetime.now(), style1)<br>ws.write(2, 0, 1)<br>ws.write(2, 1, 1)<br>ws.write(2, 2, xlwt.Formula(“A3+B3”))</p>
+<p>wb.save(‘example.xls’)<br>’‘’</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2015/11/07/amazon/">
                 Amazon
               </a>
@@ -273,7 +355,7 @@
         
           <p>Asked to find sub-strings from a string which are valid dictionary words.</p>
 <p>Two sentences and wanted me to return a list of words that exists in one sentence but not on the other one. for example s1 = “I am happy” s2 = “I am old”, you have to return [“happy”, “old”]</p>
-<h1 id="the_difference_between_abstract_class_and_interface">the difference between abstract class and interface</h1><h2 id="interface">interface</h2><p>An interface is a contract: the guy writing the interface says, “hey, I accept things looking that way”, and the guy using the interface says “Ok, the class I write looks that way”.</p>
+<h1 id="the_difference_betwemarken_abstract_class_and_interface">the difference betwemarken abstract class and interface</h1><h2 id="interface">interface</h2><p>An interface is a contract: the guy writing the interface says, “hey, I accept things looking that way”, and the guy using the interface says “Ok, the class I write looks that way”.</p>
 <p>An interface is an empty shell, there are only the signatures of the methods, which implies that the methods do not have a body. The interface can’t do anything. It’s just a pattern.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// I say all motor vehicles should look like this:</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getFuel</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// my team mate complies and writes vehicle looking that way</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> <span class="keyword">implements</span> <span class="title">MotorVehicle</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> fuel;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        print(<span class="string">"Wrroooooooom"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getFuel</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.fuel;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>Implementing an interface consumes very little CPU, because it’s not a class, just a bunch of names, and therefore there is no expensive look-up to do. It’s great when it matters such as in embedded devices.</p>
 <h2 id="Abstract_class">Abstract class</h2><p>Abstract classes, unlike interfaces, are classes. They are more expensive to use because there is a look-up to do when you inherit from them.</p>
@@ -282,6 +364,86 @@
 <p>In Java, this rule is strongly enforced, while in PHP, interfaces are abstract classes with no method declared.</p>
 <p>In Python, abstract classes are more a programming trick you can get from the ABC module and is actually using metaclasses, and therefore classes. And interfaces are more related to duck typing in this language and it’s a mix between conventions and special methods that call descriptors (the <strong>method</strong> methods).</p>
 <p>As usual with programming, there is theory, practice, and practice in another language :-)</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/2015/11/07/oop/">
+                OOP
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2015-11-07
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/学习/">学习</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/11/07/oop/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/11/07/oop/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <a id="more"></a>
+<p>转载：<a href="https://www3.ntu.edu.sg/home/ehchua/programming/cpp/cp3_OOP.html" target="_blank" rel="external">https://www3.ntu.edu.sg/home/ehchua/programming/cpp/cp3_OOP.html</a><br>C++ Programming Language<br>Object-Oriented Programming (OOP) in C++</p>
+<h2 id="Why_OOP?">Why OOP?</h2><p>Suppose that you want to assemble your own PC, you go to a hardware store and pick up a motherboard, a processor, some RAMs, a hard disk, a casing, a power supply, and put them together.  You turn on the power, and the PC runs.  You need not worry whether the motherboard is a 4-layer or 6-layer board, whether the hard disk has 4 or 6 plates; 3 inches or 5 inches in diameter, whether the RAM is made in Japan or Korea, and so on. You simply put the hardware components together and expect the machine to run.  Of course, you have to make sure that you have the correct interfaces, i.e., you pick an IDE hard disk rather than a SCSI hard disk, if your motherboard supports only IDE; you have to select RAMs with the correct speed rating, and so on.  Nevertheless, it is not difficult to set up a machine from hardware components.</p>
+<p>Similarly, a car is assembled from parts and components, such as chassis, doors, engine, wheels, brake, and transmission. The components are reusable, e.g., a wheel can be used in many cars (of the same specifications).<br>Hardware, such as computers and cars, are assembled from parts, which are reusable components.<br>How about software?  Can you “assemble” a software application by picking a routine here, a routine there, and expect the program to run?  The answer is obviously no!  Unlike hardware, it is very difficult to “assemble” an application from software components.  Since the advent of computer 60 years ago, we have written tons and tons of programs.  However, for each new application, we have to re-invent the wheels and write the program from scratch.<br>Why re-invent the wheels?</p>
 
         
       
@@ -799,180 +961,11 @@
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/07/16/狗镇/">
-                傲慢-狗镇
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2015-07-16
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/生活/">生活</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/07/16/狗镇/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/16/狗镇/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>这是一个真正的恐怖片。</p>
-<p>它的恐怖之处在于，它是一个锐利的、寒光闪闪的追问。在这个追问之下，我们自以为是的道德变得弱不经风：如果你是狗镇人，你会对一个无辜者施暴吗？再假如，暴力是民主化的，是被允许的，安全的、正当的，没有后顾之忧的，你也能从中获得某种满足的，满城皆如是、无人是例外的，你还敢信心满满地说不么？</p>
-<p>在看完《狗镇》之后，我长久地处于一种颤栗状态，是真实的肉体颤栗，而非修辞。它不由分说地，把我推到人性的法庭，拷问我的良知，审判我的德行，以至于后来，它们统统站不住脚，变成了可疑的存在。</p>
-<p>我会吗？我敢和整个镇子唱反调吗？</p>
-<p>我无法自信。</p>
-<p>也许会？也许不会？又也许我只会冷眼旁观，不跟从恶行，也不违良知，远离集体，明哲保身。但，沉默何尝不是另一种认可，冷暴力何尝不是另一种形式的暴力。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/16/狗镇/#more">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/07/08/经历/">
-                你未必是人好，你只是没机会放荡
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2015-07-08
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/生活/">生活</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/07/08/经历/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/08/经历/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>作者 :  杨奇函 <a href="http://blog.renren.com/share/258366974/17933740255">http://blog.renren.com/share/258366974/17933740255</a></p>
-<p>毕业后自己要承担自己的一切开销，便不得不精打细算了起来。每买东西或出去玩都会很省。我常常以节俭自诩，各种秀自己的勤俭节约。某天我跟我妈说我如何是一个勤俭节约的人。我妈呵呵，说：“儿子你不是勤俭节约，你只不过现在拮据了。当年你花我们钱的时候你怎么就没有节俭呢？”我无言以对。</p>
-<p>小时候认识邻居一叔是公务员。十年前他处于边缘岗位。总听见他谩骂贪官，咒骂腐败。家里也确实经济条件一般。我们觉得他肯定是一个好干部。后来这叔被提拔为了某实权部门的副处长。然后前几天落马了。我伙呆。听他妻子说，原来叔“靠边站”的时候真的对腐败恨之入骨。但是后来有了权力尝到了腐败的甜头，一样吃拿卡要。邻居听后，不胜唏嘘。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/08/经历/#more">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
   <div class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
   </div>
 
 
@@ -1006,7 +999,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-count">31</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -1020,7 +1013,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">18</span>
               <span class="site-state-item-name">tags</span>
               </a>
           </div>
@@ -1058,7 +1051,7 @@
         <div class="copyright">
   
   &copy; &nbsp; 
-  2015
+  2016
   <span class="with-love">
     <i class="icon-heart"></i>
   </span>
