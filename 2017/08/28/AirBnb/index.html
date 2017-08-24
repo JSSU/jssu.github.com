@@ -22,7 +22,7 @@
 
 
 
-  <meta name="keywords" content="Uber," />
+  <meta name="keywords" content="文章," />
 
 
 
@@ -47,7 +47,7 @@
 
 
 
-  <title> Timestamp // JSSU_Shen </title>
+  <title> Airbnb // JSSU_Shen </title>
 </head>
 
 <body>
@@ -142,7 +142,7 @@
           
           
             
-              Timestamp
+              Airbnb
             
           
         </h1>
@@ -150,7 +150,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on 2015-06-07
+          Posted on 2017-08-28
         </span>
 
         
@@ -170,8 +170,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/06/07/Timestamp/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/06/07/Timestamp/"></span>
+            <a href="/2017/08/28/AirBnb/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/08/28/AirBnb/"></span>
             </a>
           </span>
           
@@ -185,12 +185,10 @@
       
 
       
-        <p> Example:<br>     timestamp: 1 ‘key’ ‘value1’<br>     timestamp: 2 ‘key’ ‘value2’<br>     timestamp: 3 ‘key’ ‘value3’<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">1</span>)</span> -&gt;</span> value1</span><br><span class="line"><span class="string">'key'</span> @ timestamp <span class="number">1</span><span class="function"> -&gt;</span> value1</span><br><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">2</span>)</span> -&gt;</span> value1</span><br><span class="line"><span class="string">'key'</span> @ timestamp <span class="number">2</span><span class="function"> -&gt;</span> value2</span><br><span class="line"><span class="string">'key'</span> @ timestamp <span class="number">1.5</span><span class="function"> -&gt;</span> value1</span><br><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">3</span>)</span> --&gt;</span> ??? value3</span><br><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">0</span>)</span> --&gt;</span> ??? <span class="number">0</span> <span class="keyword">or</span> <span class="literal">undefined</span></span><br><span class="line">get<span class="function"><span class="params">(<span class="string">'key'</span>, <span class="number">10</span>)</span> --&gt;</span> ??? value3</span><br></pre></td></tr></table></figure></p>
-<p>要求设计<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">void <span class="operator"><span class="keyword">set</span>(<span class="built_in">int</span> <span class="keyword">timestamp</span>, <span class="keyword">string</span> <span class="keyword">key</span>, <span class="built_in">int</span> val)</span><br><span class="line"><span class="built_in">int</span> <span class="keyword">get</span>(<span class="built_in">int</span> t, <span class="keyword">string</span> <span class="keyword">key</span>)</span></span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;vector&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;unordered_map&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> Node</span><br><span class="line">&#123; <span class="keyword">int</span> timestamp;</span><br><span class="line">  <span class="keyword">int</span> val;</span><br><span class="line">    Node(<span class="keyword">int</span> t, <span class="keyword">int</span> v)&#123;timestamp=t; val=v;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Timestp</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="built_in">vector</span>&lt;Node&gt;&gt; <span class="built_in">map</span>;</span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">set</span><span class="params">(<span class="keyword">int</span> timestamp, <span class="built_in">string</span> key, <span class="keyword">int</span> val)</span></span><br><span class="line">   </span>&#123;</span><br><span class="line">      <span class="built_in">map</span>[key].push_back(Node(timestamp, val));</span><br><span class="line">   &#125; </span><br><span class="line">   <span class="function"><span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> t, <span class="built_in">string</span> key)</span></span><br><span class="line">   </span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(<span class="built_in">map</span>.find(key)==<span class="built_in">map</span>.end()) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">int</span> m=<span class="number">0</span>;</span><br><span class="line">       <span class="keyword">int</span> lenv=<span class="built_in">map</span>[key].size();</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;lenv; i++)</span><br><span class="line">       &#123;</span><br><span class="line">          <span class="keyword">if</span>(<span class="built_in">map</span>[key][i].timestamp==t)</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">map</span>[key][i].val;</span><br><span class="line">          <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">map</span>[key][i].timestamp&lt;t)</span><br><span class="line">            m=<span class="built_in">map</span>[key][i].val;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> m;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  Timestp sol;</span><br><span class="line">  sol.<span class="built_in">set</span>(<span class="number">1</span>,<span class="string">"fred"</span>, <span class="number">2</span>);</span><br><span class="line">  sol.<span class="built_in">set</span>(<span class="number">2</span>,<span class="string">"hello"</span>, <span class="number">4</span>);</span><br><span class="line">  sol.<span class="built_in">set</span>(<span class="number">4</span>,<span class="string">"hello"</span>, <span class="number">10</span>);</span><br><span class="line">  sol.<span class="built_in">set</span>(<span class="number">3</span>,<span class="string">"nice"</span>, <span class="number">6</span>);</span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;endl;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"sol.get(2,'fred')= "</span>&lt;&lt;sol.get(<span class="number">2</span>,<span class="string">"fred"</span>)&lt;&lt;endl;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"sol.get(3.5, 'hello')= "</span>&lt;&lt;sol.get(<span class="number">3.5</span>, <span class="string">"hello"</span>)&lt;&lt;endl;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"sol.get(4.5, 'hello')= "</span>&lt;&lt;sol.get(<span class="number">4.5</span>, <span class="string">"hello"</span>)&lt;&lt;endl;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>他们公司list价格分成好几个部分，但是都是整数，如果在美金是整数，到了欧洲的网页显示汇率转换之后就变成了floating point，然后要round成整数，但是全部加起来round，和单独round再加起来，结果会不一样</p>
+<h1 id="base_price_100_=&gt;_131-13_=&gt;_131">base price    100 =&gt;  131.13   =&gt; 131</h1><h1 id="cleaning_fee_20_=&gt;_26-23_=&gt;_26">cleaning fee   20 =&gt;   26.23   =&gt; 26</h1><h1 id="service_fee_10_=&gt;_13-54_=&gt;_14">service fee    10 =&gt;   13.54   =&gt; 14</h1><h1 id="tax_5_=&gt;_6-5_=&gt;_7-">tax                5 =&gt;    6.5      =&gt; 7.</h1><h1 id="=&gt;_177-4E_=&gt;_178E">=&gt;  177.4E   =&gt; 178E</h1><h1 id="sum_135$_=&gt;_178-93E_=&gt;_179E">sum           135$ =&gt; 178.93E =&gt; 179E</h1><p>那么问题就来了，给个input list of floating points, 要求output list of integers, 满足以下两个constraint， 就是和跟Round(x1+x2+… +xn)的结果一样，但是minimize output 和input的绝对值差之和</p>
+<h1 id="Input:_A_=_[x1,_x2,_…,_xn]">Input: A = [x1, x2, …, xn]</h1><h1 id="Sum_T_=_Round(x1+x2+…_+xn)_;_178-93E_=&gt;_179-">Sum T = Round(x1+x2+… +xn)  ;  178.93E =&gt; 179.</h1><h1 id="Output:_B_=_[y1,_y2,_…-,_yn]">Output: B = [y1, y2, …., yn]</h1><h1 id="Constraint_#1:_y1+y2+…+yn_=_T">Constraint #1: y1+y2+…+yn = T</h1><h1 id="Constraint_#2:_minimize_sum(abs(diff(xi_-_yi)))">Constraint #2: minimize sum(abs(diff(xi - yi)))</h1><p>举例</p>
+<h1 id="A_=_[1-2,_2-3,_3-4]">A = [1.2, 2.3, 3.4]</h1><h1 id="Round(1-2_+_2-3_+_3-4)_=_6-9_=&gt;_7-">Round(1.2 + 2.3 + 3.4) = 6.9 =&gt; 7.</h1><h1 id="1_+_2_+_3_=&gt;_6">1 + 2 + 3 =&gt; 6</h1><h1 id="1_+_3_+_3_=&gt;_7">1 + 3 + 3 =&gt; 7</h1><h1 id="0-2_+_0-7_+_0-4_=_1-3">0.2 + 0.7 + 0.4 = 1.3</h1><h1 id="1_+_2_+_4_=&gt;_7">1 + 2 + 4 =&gt; 7</h1><h1 id="0-2_+_0-3_+_0-6_=_1-1">0.2 + 0.3 + 0.6 = 1.1</h1><p>所以[1,2,4]比[1,3,3]要好</p>
 
       
     </div>
@@ -199,7 +197,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Uber/"> #Uber </a>
+            <a href="/tags/文章/"> #文章 </a>
           
         </div>
       
@@ -208,13 +206,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/06/07/Design/">FB Design Preparation</a>
+              <a href="/2022/04/20/ANotes/">Notes</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/06/06/论底层青年如何逆袭到中上层/">论底层青年如何逆袭到中上阶层</a>
+              <a href="/2016/08/13/SublimeProject使用/">Sublime-project 一键大开方法</a>
             
           </div>
         </div>
@@ -323,7 +321,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#base_price_100_=>_131-13_=>_131"><span class="nav-number">1.</span> <span class="nav-text">base price    100 =>  131.13   => 131</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cleaning_fee_20_=>_26-23_=>_26"><span class="nav-number">2.</span> <span class="nav-text">cleaning fee   20 =>   26.23   => 26</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#service_fee_10_=>_13-54_=>_14"><span class="nav-number">3.</span> <span class="nav-text">service fee    10 =>   13.54   => 14</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tax_5_=>_6-5_=>_7-"><span class="nav-number">4.</span> <span class="nav-text">tax                5 =>    6.5      => 7.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#=>_177-4E_=>_178E"><span class="nav-number">5.</span> <span class="nav-text">=>  177.4E   => 178E</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sum_135$_=>_178-93E_=>_179E"><span class="nav-number">6.</span> <span class="nav-text">sum           135$ => 178.93E => 179E</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Input:_A_=_[x1,_x2,_…,_xn]"><span class="nav-number">7.</span> <span class="nav-text">Input: A = [x1, x2, …, xn]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sum_T_=_Round(x1+x2+…_+xn)_;_178-93E_=>_179-"><span class="nav-number">8.</span> <span class="nav-text">Sum T = Round(x1+x2+… +xn)  ;  178.93E => 179.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Output:_B_=_[y1,_y2,_…-,_yn]"><span class="nav-number">9.</span> <span class="nav-text">Output: B = [y1, y2, …., yn]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Constraint_#1:_y1+y2+…+yn_=_T"><span class="nav-number">10.</span> <span class="nav-text">Constraint #1: y1+y2+…+yn = T</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Constraint_#2:_minimize_sum(abs(diff(xi_-_yi)))"><span class="nav-number">11.</span> <span class="nav-text">Constraint #2: minimize sum(abs(diff(xi - yi)))</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#A_=_[1-2,_2-3,_3-4]"><span class="nav-number">12.</span> <span class="nav-text">A = [1.2, 2.3, 3.4]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Round(1-2_+_2-3_+_3-4)_=_6-9_=>_7-"><span class="nav-number">13.</span> <span class="nav-text">Round(1.2 + 2.3 + 3.4) = 6.9 => 7.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1_+_2_+_3_=>_6"><span class="nav-number">14.</span> <span class="nav-text">1 + 2 + 3 => 6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1_+_3_+_3_=>_7"><span class="nav-number">15.</span> <span class="nav-text">1 + 3 + 3 => 7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0-2_+_0-7_+_0-4_=_1-3"><span class="nav-number">16.</span> <span class="nav-text">0.2 + 0.7 + 0.4 = 1.3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1_+_2_+_4_=>_7"><span class="nav-number">17.</span> <span class="nav-text">1 + 2 + 4 => 7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0-2_+_0-3_+_0-6_=_1-1"><span class="nav-number">18.</span> <span class="nav-text">0.2 + 0.3 + 0.6 = 1.1</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -552,9 +550,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'jssublog';
-      var disqus_identifier = '2015/06/07/Timestamp/';
-      var disqus_title = 'Timestamp';
-      var disqus_url = 'http://jssu.github.io/2015/06/07/Timestamp/';
+      var disqus_identifier = '2017/08/28/AirBnb/';
+      var disqus_title = 'Airbnb';
+      var disqus_url = 'http://jssu.github.io/2017/08/28/AirBnb/';
 
       (function(){
         var dsq = document.createElement('script');
