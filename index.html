@@ -225,6 +225,82 @@
           
           
             
+              <a class="post-title-link" href="/2017/09/05/Apple/">
+                Apple
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on 2017-09-05
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; In
+            
+              <a href="/categories/学习/">学习</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2017/09/05/Apple/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/09/05/Apple/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;vector&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;utility&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">calcScore</span><span class="params">(<span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;&gt;&amp; inp)</span> <span class="comment">//&lt;5,6,10,9&gt; --&gt;&lt;10, 9,  &gt;</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res =<span class="number">0</span>;</span><br><span class="line">    <span class="comment">//for handle a:</span></span><br><span class="line">    <span class="comment">// b, c</span></span><br><span class="line">    <span class="keyword">int</span> checkPair[<span class="number">13</span>]=&#123;<span class="number">0</span>&#125;; <span class="comment">// A-king, 1-13 0-12 //-1</span></span><br><span class="line">    <span class="keyword">int</span> checkFlush[<span class="number">4</span>] =&#123;<span class="number">0</span>&#125;; <span class="comment">// 4 suits 0 ,1,2,3</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> item: inp)</span><br><span class="line">    &#123;</span><br><span class="line">      checkPair[item.second-<span class="number">1</span>]++;</span><br><span class="line">      checkFlush[item.first]++;</span><br><span class="line">      <span class="keyword">if</span>(checkFlush[item.first]==<span class="number">4</span>) </span><br><span class="line">        res+=<span class="number">4</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> item: checkPair)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span>(item==<span class="number">2</span>)</span><br><span class="line">        res+=<span class="number">2</span>;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(item==<span class="number">3</span>)</span><br><span class="line">      &#123;</span><br><span class="line">       <span class="comment">//c num 2</span></span><br><span class="line">        res+= <span class="number">6</span>;      <span class="comment">// 2*3; // 3 =&gt; 3, 4=&gt;6 (n-1)*(n-2)</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(item==<span class="number">4</span>)</span><br><span class="line">      &#123;</span><br><span class="line">        res+=<span class="number">12</span>;     <span class="comment">//2*6;</span></span><br><span class="line">      &#125;   </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> x: inp)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span>(x.second&gt;<span class="number">10</span>) x.second=<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;inp.size(); i++)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>; j&lt;inp.size(); j++)</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="keyword">if</span>(inp[i].second + inp[j].second&gt;=<span class="number">15</span>)</span><br><span class="line">          res+=<span class="number">2</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// To execute C++, please define "int main()"</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;&gt; inp=&#123;</span><br><span class="line">    &#123;<span class="number">0</span>,<span class="number">1</span>&#125;,&#123;<span class="number">0</span>,<span class="number">2</span>&#125;,&#123;<span class="number">0</span>,<span class="number">3</span>&#125;,&#123;<span class="number">0</span>,<span class="number">4</span>&#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;calcScore(inp)&lt;&lt;endl; <span class="comment">//=&gt; 4</span></span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  <span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;&gt; inp2=&#123;</span><br><span class="line">    &#123;<span class="number">0</span>,<span class="number">8</span>&#125;,&#123;<span class="number">1</span>,<span class="number">9</span>&#125;,&#123;<span class="number">0</span>,<span class="number">3</span>&#125;,&#123;<span class="number">0</span>,<span class="number">7</span>&#125;  <span class="comment">//2,2,2</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;calcScore(inp2)&lt;&lt;endl; <span class="comment">//=&gt; 4</span></span><br><span class="line">  </span><br><span class="line">  <span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;&gt; inp3=&#123;</span><br><span class="line">    &#123;<span class="number">0</span>,<span class="number">6</span>&#125;,&#123;<span class="number">1</span>,<span class="number">6</span>&#125;,&#123;<span class="number">2</span>,<span class="number">6</span>&#125;,&#123;<span class="number">0</span>,<span class="number">2</span>&#125;  <span class="comment">//2,2,2</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;calcScore(inp3)&lt;&lt;endl; <span class="comment">//=&gt; 4</span></span><br><span class="line">  </span><br><span class="line">    </span><br><span class="line">  <span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;&gt; inp4=&#123;</span><br><span class="line">    &#123;<span class="number">0</span>,<span class="number">6</span>&#125;,&#123;<span class="number">1</span>,<span class="number">6</span>&#125;,&#123;<span class="number">2</span>,<span class="number">6</span>&#125;,&#123;<span class="number">3</span>,<span class="number">6</span>&#125;  <span class="comment">//2,2,2</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="built_in">cout</span>&lt;&lt;calcScore(inp4)&lt;&lt;endl; <span class="comment">//=&gt; 4</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span><br><span class="line">Your previous Plain Text content is preserved below:</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span><br><span class="line"></span><br><span class="line">// Determine the Cribbage score (simplified) for a hand of four cards.</span><br><span class="line">Rules:</span><br><span class="line"># // a) "Fifteen" any 2 cards' values sum to 15 =&gt; 2 points</span><br><span class="line"># //        (where value of Jack,Queen,King = 10, Ace = 1).</span><br><span class="line"># // b) "Pair" any two cards with same rank =&gt; 2 points. //2,2,2 -&gt; 6</span><br><span class="line"># // c) "flush" all four cards with same suit =&gt; 4 points. //1,2,3,4 Hearts </span><br><span class="line"># // Example: [Jack Hearts, Jack Clubs, 5 Spades, Queen Clubs] ==&gt; 8 pts</span><br><span class="line"># //  2 pts:  Jack Hearts + 5 = 15</span><br><span class="line"># //  2 pts:  Jack Clubs  + 5 = 15</span><br><span class="line"># //  2 pts:  Queen Clubs + 5 = 15</span><br><span class="line"># //  2 pts:  Pair of Jacks)</span><br><span class="line"></span><br><span class="line"># Question: Implement a func calcScore that returns the score for a hand of</span><br><span class="line">cards</span><br><span class="line">//input 4.</span><br><span class="line">//c++</span><br><span class="line">//pair&lt;int, int&gt; heart-1, clubs -2.... //&lt;suit, number&gt;</span><br><span class="line">//inp no dup</span><br><span class="line">//[C1 , C2, C3, C4]  = 0+</span><br><span class="line">//checkPair[1,1,1,1,0,0,0...]</span><br><span class="line"> */</span></span></span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2017/08/28/AirBnb/">
                 Airbnb
               </a>
@@ -896,87 +972,6 @@
 
 
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/2015/10/12/AngularJS/">
-                AngularNote
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          Posted on 2015-10-12
-        </span>
-
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; In
-            
-              <a href="/categories/学习/">学习</a>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/10/12/AngularJS/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/12/AngularJS/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>学习笔记：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div ng-app=<span class="string">"myApp"</span> ng-controller=<span class="string">"myCtrl"</span>&gt;</span><br><span class="line">名: <span class="xml"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">ng-model</span>=<span class="value">"firstName"</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line">名: <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">ng-model</span>=<span class="value">"lastName"</span>&gt;</span><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line">姓名: &#123;&#123;firstName + " " + lastName&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="php"></span><br><span class="line"><span class="keyword">var</span> app = angular.module(<span class="string">'myApp'</span>, []);</span><br><span class="line">app.controller(<span class="string">'myCtrl'</span>, <span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$scope</span>)</span> </span>&#123;</span><br><span class="line">    <span class="variable">$scope</span>.firstName = <span class="string">"John"</span>;</span><br><span class="line">    <span class="variable">$scope</span>.lastName = <span class="string">"Doe"</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/10/12/AngularJS/#more">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
   </div>
 
   
@@ -1015,7 +1010,7 @@
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">34</span>
+              <span class="site-state-item-count">35</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
